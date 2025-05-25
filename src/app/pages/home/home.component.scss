@@ -1,0 +1,26 @@
+.container-3d {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.sobre-card {
+  position: relative;
+  z-index: 10;
+  margin: 5rem auto;
+  width: fit-content;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+.main
+{
+  background-color: gray;
+  width: 100vw;
+  height: 100vh;
+}

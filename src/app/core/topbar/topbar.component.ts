@@ -1,0 +1,31 @@
+import { Component } from '@angular/core';
+import { LucideAngularModule, Menu, Sun, Languages } from 'lucide-angular';
+
+@Component({
+  selector: 'app-topbar',
+  standalone: true,
+  imports: [LucideAngularModule],
+  templateUrl: './topbar.component.html',
+  styleUrl: './topbar.component.scss',
+})
+export class TopbarComponent {
+  // Referências aos ícones
+  readonly Menu = Menu;
+  readonly Sun = Sun;
+  readonly Languages = Languages;
+
+  isDarkMode = false;
+
+  toggleLanguage() {
+    console.log('Trocar idioma');
+  }
+
+  toggleTheme() {
+    this.isDarkMode = !this.isDarkMode;
+    console.log(`Tema ${this.isDarkMode ? 'Escuro' : 'Claro'}`);
+  }
+
+  toggleMenu() {
+    console.log('Abrir menu lateral');
+  }
+}

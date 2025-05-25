@@ -1,1 +1,13 @@
-<p>home works!</p>
+
+<div class="container-3d" #rendererContainer></div>
+  
+<div class="sobre-card d-flex flex-col items-center">
+  <h1>Gabriel Librande</h1>
+  <p>Desenvolvedor Full Stack | Angular, Spring Boot, .NET</p>
+  <button 
+  (click)="toggleGirar()"
+  class=" d-flex px-6 py-2 bg-gradient-to-r from-blue-600 to-blue-800 text-white font-semibold rounded-xl shadow-md hover:scale-105 hover:from-blue-700 hover:to-blue-900 transition">
+  <lucide-icon [img]="RefreshCcw" class="w-5 h-5 mr-2"></lucide-icon> Girar modelo 3D
+</button>
+</div>
+
