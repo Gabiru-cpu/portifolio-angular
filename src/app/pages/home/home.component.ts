@@ -1,7 +1,9 @@
-import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, AfterViewInit, ElementRef, ViewChild, OnInit, OnDestroy } from '@angular/core';
 import { LucideAngularModule, RefreshCcw } from 'lucide-angular';
+import { Subscription } from 'rxjs';
 import * as THREE from 'three';
 import { ColladaLoader } from 'three/examples/jsm/loaders/ColladaLoader.js';
+import { AnimatorService } from '../../services/animator.service';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +12,7 @@ import { ColladaLoader } from 'three/examples/jsm/loaders/ColladaLoader.js';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent implements AfterViewInit {
+export class HomeComponent implements AfterViewInit, OnInit, OnDestroy {
   readonly RefreshCcw = RefreshCcw;
 
   @ViewChild('rendererContainer', { static: false }) rendererContainer!: ElementRef;
@@ -25,9 +27,25 @@ export class HomeComponent implements AfterViewInit {
   private mouseX = 0;
   private mouseY = 0;
 
+  private subscription!: Subscription;
+
+  constructor(private animatorService: AnimatorService) {}
+
+
+
   ngAfterViewInit(): void {
     this.init3D();
     this.addMouseListeners();
+  }
+
+  ngOnInit() {
+    this.subscription = this.animatorService.toggleGirar$.subscribe(() => {
+      this.toggleGirar();
+    });
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 
   toggleGirar(): void {
