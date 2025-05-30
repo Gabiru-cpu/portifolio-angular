@@ -1,1 +1,41 @@
-<p>projects works!</p>
+<div class="carousel-container">
+  <div class="carousel">
+    <div
+      class="card"
+      *ngFor="let project of projects; let i = index"
+      [ngClass]="getCardClass(i)"
+    >
+      <div class="content">
+        <h3>{{ project.description }}</h3>
+        <div class="actions">
+          <button (click)="openVideo(project.videoUrl)">
+            ▶️ Ver Vídeo
+          </button>
+          <a [href]="project.link" target="_blank">
+            🔗 Ver Projeto
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="buttons">
+    <button (click)="previous()">⬅️</button>
+    <button (click)="next()">➡️</button>
+  </div>
+</div>
+
+<!-- Modal para vídeo -->
+<div
+  *ngIf="selectedVideo"
+  class="video-modal"
+>
+  <div class="video-content">
+    <iframe
+      [src]="selectedVideo | safe"
+      frameborder="0"
+      allowfullscreen
+    ></iframe>
+    <button (click)="closeVideo()">❌</button>
+  </div>
+</div>

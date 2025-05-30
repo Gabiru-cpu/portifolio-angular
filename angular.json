@@ -36,7 +36,7 @@
               "src/styles.scss"
             ],
             "scripts": [],
-            "baseHref": "/Gabriel-Librande/"
+            "baseHref": "/portifolio-angular/"
           },
           "configurations": {
             "production": {

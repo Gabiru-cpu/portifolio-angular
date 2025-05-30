@@ -1,32 +1,41 @@
-<div class="experience">
-  <h2>Experiência Profissional</h2>
+<div class="experience-container">
+  <h2 class="title">Experiência Profissional</h2>
 
-  <div class="timeline">
-    <div 
-      class="timeline-point" 
-      *ngFor="let job of experiences; let i = index"
-      (mouseenter)="activeIndex = i" 
-      (mouseleave)="activeIndex = null"
-      [class.active]="activeIndex === i"
-      [attr.aria-label]="'Experiência ' + job.role"
-      tabindex="0"
-      (focus)="activeIndex = i"
-      (blur)="activeIndex = null"
+  <button (click)="toggleOrientation()" class="toggle-button">
+    <span class="icon">
+      {{ orientation === 'vertical' ? '➡️' : '⬇️' }}
+    </span>
+    Mudar para {{ orientation === 'vertical' ? 'horizontal' : 'vertical' }}
+  </button>
+
+  <div [ngClass]="orientation">
+    <!-- Linha da timeline -->
+    <div
+      class="timeline-line"
+      [ngStyle]="
+        orientation === 'vertical' ? { 'height.%': scrollProgress } : {}
+      "
+    ></div>
+
+    <!-- Itens da timeline -->
+    <div
+      class="timeline-item"
+      *ngFor="let exp of experiences; let i = index"
+      [attr.data-aos]="orientation === 'vertical' ? 'fade-up' : null"
+      [attr.data-aos-delay]="orientation === 'vertical' ? i * 100 : null"
+      [attr.data-aos-duration]="orientation === 'vertical' ? 600 : null"
+      [attr.data-aos-easing]="orientation === 'vertical' ? 'ease-in-out' : null"
     >
-      <div class="tooltip" *ngIf="activeIndex === i">
-        <div class="position">{{ job.role }}</div>
-        <div class="company">{{ job.company }}</div>
-        <div class="date">{{ job.year }}</div>
-        <div class="description">{{ job.summary }}</div>
-        <div *ngIf="job.achievements?.length">
-          <strong>Realizações:</strong>
-          <ul>
-            <li *ngFor="let item of job.achievements">{{ item }}</li>
-          </ul>
-        </div>
+      <div class="timeline-point"></div>
+      <div class="timeline-content">
+        <h3>{{ exp.role }}</h3>
+        <p class="company">{{ exp.company }}</p>
+        <p class="year">{{ exp.year }}</p>
+        <p class="summary">{{ exp.summary }}</p>
+        <ul *ngIf="exp.achievements?.length">
+          <li *ngFor="let item of exp.achievements">{{ item }}</li>
+        </ul>
       </div>
-      <span class="point"></span>
-      <span class="year">{{ job.year }}</span>
     </div>
   </div>
 </div>
