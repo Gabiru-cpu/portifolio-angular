@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-network',
@@ -8,7 +8,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
   templateUrl: './network.component.html',
   styleUrls: ['./network.component.scss'],
 })
-export class NetworkComponent implements OnInit, OnDestroy {
+export class NetworkComponent {
   connections = [
     {
       name: 'Ana Silva',
@@ -18,64 +18,59 @@ export class NetworkComponent implements OnInit, OnDestroy {
     },
     {
       name: 'Bruno Costa',
-      role: 'Engenheiro de Software',
-      company: 'InovaTech',
+      role: 'Engenheiro de Dados',
+      company: 'DataCorp',
       img: 'https://randomuser.me/api/portraits/men/32.jpg',
     },
     {
       name: 'Carla Souza',
-      role: 'Product Owner',
-      company: 'NextLevel',
+      role: 'UI/UX Designer',
+      company: 'DesignLab',
       img: 'https://randomuser.me/api/portraits/women/65.jpg',
     },
     {
-      name: 'Daniel Oliveira',
-      role: 'UI/UX Designer',
-      company: 'DesignLab',
+      name: 'Diego Rocha',
+      role: 'Desenvolvedor Full Stack',
+      company: 'WebWorks',
       img: 'https://randomuser.me/api/portraits/men/76.jpg',
     },
     {
-      name: 'Eduardo Lima',
-      role: 'Desenvolvedor Full Stack',
-      company: 'Freelancer',
-      img: 'https://randomuser.me/api/portraits/men/85.jpg',
+      name: 'Eduarda Lima',
+      role: 'Product Manager',
+      company: 'InovaTech',
+      img: 'https://randomuser.me/api/portraits/women/33.jpg',
     },
   ];
 
-  groupedConnections: any[][] = [];
   currentIndex = 0;
-  autoplayInterval: any;
 
-  ngOnInit() {
-    this.groupedConnections = this.chunkArray(this.connections, 3);
-    this.startAutoplay();
-  }
-
-  ngOnDestroy() {
-    clearInterval(this.autoplayInterval);
-  }
-
-  chunkArray(arr: any[], size: number) {
-    const res = [];
-    for (let i = 0; i < arr.length; i += size) {
-      res.push(arr.slice(i, i + size));
-    }
-    return res;
+  next() {
+    this.currentIndex = (this.currentIndex + 1) % this.connections.length;
   }
 
   prev() {
     this.currentIndex =
-      (this.currentIndex - 1 + this.groupedConnections.length) %
-      this.groupedConnections.length;
+      (this.currentIndex - 1 + this.connections.length) %
+      this.connections.length;
   }
 
-  next() {
-    this.currentIndex = (this.currentIndex + 1) % this.groupedConnections.length;
-  }
-
-  startAutoplay() {
-    this.autoplayInterval = setInterval(() => {
-      this.next();
-    }, 4000);
+  getCardClass(index: number): string {
+    const diff =
+      (index - this.currentIndex + this.connections.length) %
+      this.connections.length;
+    switch (diff) {
+      case 0:
+        return 'card-center';
+      case 1:
+        return 'card-right1';
+      case 2:
+        return 'card-right2';
+      case this.connections.length - 1:
+        return 'card-left1';
+      case this.connections.length - 2:
+        return 'card-left2';
+      default:
+        return 'card-hidden';
+    }
   }
 }
