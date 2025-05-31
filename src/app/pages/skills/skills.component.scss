@@ -30,8 +30,17 @@
       margin-bottom: 0.5rem;
 
       span {
-        width: 180px;
-        color: #cbd5e1;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      width: 180px;
+      color: #cbd5e1;
+
+        img {
+          width: 28px;
+          height: 28px;
+          object-fit: contain;
+        }
       }
 
       .bar {
@@ -46,6 +55,34 @@
           border-radius: 1rem;
           animation: progressLoad 1.8s ease forwards;
         }
+
+        .angular{background: linear-gradient(to right, #eb2525, #9b2c2c);}
+        .react{background: linear-gradient(to right, #38bdf8, #2563eb);}
+        .html {background: linear-gradient(to right, #FFA500, #FF8C00,#ceb52a, #afa20f,#2592eb, #2c819b);}
+        .tailwindbootstrap{background: linear-gradient(to right, #0c65ad, #8d27c9);}
+        .spring{background: linear-gradient(to right, #086125, #27c94a);}
+        .NET{background: linear-gradient(to right, #4c0861, #200c7a);}
+        .laravel{background: linear-gradient(to right, #610839, #c92727);}
+        .mypostsql{background: linear-gradient(to right, #396c94, #e59208);}
+        .sqlserver{background: linear-gradient(to right, #8d7b7b, #c92727);}
+        .mongodb{background: linear-gradient(to right, #27c94a, #086125);}
+        .redis{background: linear-gradient(to right, #a12f2f, #ffffff);}
+
+        .unity{background: linear-gradient(to right, #a7a4a4, #ffffff);}
+        .blender{background: linear-gradient(to right, #cf8d40, #df950d);}
+        .unreal{background: linear-gradient(to right, #464646, #000);}
+        // .godot{background: linear-gradient(to right, #cf8d40, #df950d);}
+        .gamemaker{background: linear-gradient(to right, #000, #464646);}
+        .figma{background: linear-gradient(to right, #a259ff, #0ace82);}
+        .photoshop{background: linear-gradient(to right, #011e37, #2563eb);}
+
+        // .docker{background: linear-gradient(to right, #cf8d40, #df950d);}
+        .git{background: linear-gradient(to right, #e46751, #f05033);}
+        // .azure{background: linear-gradient(to right, #a12f2f, #ffffff);}
+        .postman{background: linear-gradient(to right, #e46751, #f05033);}
+        // .scrum{background: linear-gradient(to right, #a12f2f, #ffffff);}
+        // .kanban{background: linear-gradient(to right, #a12f2f, #ffffff);}
+        // .lean{background: linear-gradient(to right, #a12f2f, #ffffff);}
       }
     }
   }
@@ -62,7 +99,7 @@
   background-color: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 1rem;
-  padding: 2rem;
+  padding: 1rem 2rem 0 2rem;
   backdrop-filter: blur(10px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -76,6 +113,7 @@
 .tabs {
   display: flex;
   gap: 1rem;
+  padding-top: 2px;
   margin-bottom: 1.5rem;
 
   button {
@@ -97,5 +135,19 @@
       color: white;
       border-color: #2563eb;
     }
+  }
+}
+
+
+
+.collapse-wrapper {
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  max-height: 2000px; // grande o suficiente para o conteúdo aberto
+  opacity: 1;
+
+  &.collapsed {
+    max-height: 0;
+    opacity: 0;
   }
 }

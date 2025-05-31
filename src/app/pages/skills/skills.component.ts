@@ -10,4 +10,9 @@ import { Component } from '@angular/core';
 })
 export class SkillsComponent {
   activeTab: string = 'dev';
+  isCollapsed: boolean = false;
+
+  toggleCollapse() {
+    this.isCollapsed = !this.isCollapsed;
+  }
 }

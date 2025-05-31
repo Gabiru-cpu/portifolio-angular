@@ -28,7 +28,7 @@
   transform: translateX(-230%) scale(0.85);
   opacity: 0.4;
   z-index: 3;
-  pointer-events: none;
+  pointer-events: auto;
 }
 
 .card-right1 {
@@ -42,7 +42,7 @@
   transform: translateX(130%) scale(0.85);
   opacity: 0.4;
   z-index: 3;
-  pointer-events: none;
+  pointer-events: auto;
 }
 
 .card-hidden {
@@ -50,4 +50,11 @@
   pointer-events: none;
   z-index: 0;
   transform: translateX(0) scale(1);
+}
+
+.arrow-page{ z-index: 500; }
+
+a {
+  text-decoration: none;
+  transition: all 0.3s ease;
 }

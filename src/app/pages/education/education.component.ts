@@ -1,15 +1,18 @@
 import { CommonModule } from '@angular/common';
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { LucideAngularModule, GraduationCap, ArrowRight } from 'lucide-angular';
 
 @Component({
   selector: 'app-education',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, LucideAngularModule],
   templateUrl: './education.component.html',
   styleUrls: ['./education.component.scss']
 })
 export class EducationComponent {
   @ViewChild('scrollContainer') scrollContainer!: ElementRef;
+
+    readonly GraduationCap = GraduationCap; readonly ArrowRight = ArrowRight;
 
   educations = [
     {

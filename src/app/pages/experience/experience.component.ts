@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-experience',
@@ -8,9 +8,10 @@ import { Component, HostListener } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
 })
-export class ExperienceComponent {
+export class ExperienceComponent implements OnInit {
   orientation: 'vertical' | 'horizontal' = 'vertical';
   scrollProgress = 0;
+  isDesktop = true;
 
   experiences = [
     {
@@ -48,18 +49,29 @@ export class ExperienceComponent {
     },
   ];
 
+  ngOnInit() {
+    this.checkScreenSize();
+  }
+
   toggleOrientation() {
-    this.orientation =
-      this.orientation === 'vertical' ? 'horizontal' : 'vertical';
+    const button = document.querySelector('.toggle-button');
+    button?.classList.add('animate');
+    setTimeout(() => button?.classList.remove('animate'), 500);
+
+    this.orientation = this.orientation === 'vertical' ? 'horizontal' : 'vertical';
   }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
     if (this.orientation === 'vertical') {
       const scrollTop = window.scrollY;
-      const docHeight =
-        document.documentElement.scrollHeight - window.innerHeight;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
       this.scrollProgress = (scrollTop / docHeight) * 130;
     }
+  }
+
+  @HostListener('window:resize', [])
+  checkScreenSize() {
+    this.isDesktop = window.innerWidth > 767;
   }
 }

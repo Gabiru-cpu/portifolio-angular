@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-network',
@@ -8,56 +8,93 @@ import { Component } from '@angular/core';
   templateUrl: './network.component.html',
   styleUrls: ['./network.component.scss'],
 })
-export class NetworkComponent {
+export class NetworkComponent implements OnInit, OnDestroy {
   connections = [
     {
-      name: 'Ana Silva',
-      role: 'Desenvolvedora Frontend',
-      company: 'Tech Solutions',
-      img: 'https://randomuser.me/api/portraits/women/44.jpg',
-    },
-    {
-      name: 'Bruno Costa',
-      role: 'Engenheiro de Dados',
-      company: 'DataCorp',
-      img: 'https://randomuser.me/api/portraits/men/32.jpg',
-    },
-    {
-      name: 'Carla Souza',
+      name: 'Vinicius Ferreira',
       role: 'UI/UX Designer',
-      company: 'DesignLab',
-      img: 'https://randomuser.me/api/portraits/women/65.jpg',
+      img: 'https://randomuser.me/api/portraits/men/45.jpg',
+      linkedin: 'https://www.linkedin.com/in/viniciusferreiraflorencio/',
     },
     {
-      name: 'Diego Rocha',
-      role: 'Desenvolvedor Full Stack',
-      company: 'WebWorks',
+      name: 'Gabriel Victorio',
+      role: 'Backend Developer',
+      img: 'https://randomuser.me/api/portraits/men/35.jpg',
+      linkedin: 'https://www.linkedin.com/in/gabrielvictorio/',
+    },
+    {
+      name: 'Diego Marcellino',
+      role: 'Backend Developer',
       img: 'https://randomuser.me/api/portraits/men/76.jpg',
+      linkedin: 'https://www.linkedin.com/in/diegomarcelino/',
     },
     {
-      name: 'Eduarda Lima',
-      role: 'Product Manager',
-      company: 'InovaTech',
-      img: 'https://randomuser.me/api/portraits/women/33.jpg',
+      name: 'Lucas Faria',
+      role: 'Backend Developer',
+      img: 'https://randomuser.me/api/portraits/men/54.jpg',
+      linkedin: 'https://www.linkedin.com/in/lucasfaria/',
+    },
+    {
+      name: 'Nikson Hernandes',
+      role: 'Backend Developer',
+      img: 'https://randomuser.me/api/portraits/men/39.jpg',
+      linkedin: 'https://www.linkedin.com/in/niksonhernandes/',
     },
   ];
 
   currentIndex = 0;
+  autoSlideInterval: any;
 
-  next() {
+  ngOnInit(): void {
+    this.startAutoSlide();
+  }
+
+  ngOnDestroy(): void {
+    clearInterval(this.autoSlideInterval);
+  }
+
+  startAutoSlide() {
+    this.autoSlideInterval = setInterval(() => {
+      this.next(false); // false = não reinicia o intervalo de novo
+    }, 10000); // 10 segundos
+  }
+
+  resetAutoSlide() {
+    clearInterval(this.autoSlideInterval);
+    this.startAutoSlide();
+  }
+
+  next(reset = true) {
     this.currentIndex = (this.currentIndex + 1) % this.connections.length;
+    if (reset) this.resetAutoSlide();
   }
 
   prev() {
-    this.currentIndex =
-      (this.currentIndex - 1 + this.connections.length) %
-      this.connections.length;
+    this.currentIndex = (this.currentIndex - 1 + this.connections.length) % this.connections.length;
+    this.resetAutoSlide();
+  }
+
+  goTo(index: number) {
+    this.resetAutoSlide();
+
+    const stepsForward = (index - this.currentIndex + this.connections.length) % this.connections.length;
+    const stepsBackward = (this.currentIndex - index + this.connections.length) % this.connections.length;
+
+    const direction = stepsForward <= stepsBackward ? 1 : -1;
+    const steps = Math.min(stepsForward, stepsBackward);
+
+    let count = 0;
+    const interval = setInterval(() => {
+      this.currentIndex = (this.currentIndex + direction + this.connections.length) % this.connections.length;
+      count++;
+      if (count >= steps) {
+        clearInterval(interval);
+      }
+    }, 200);
   }
 
   getCardClass(index: number): string {
-    const diff =
-      (index - this.currentIndex + this.connections.length) %
-      this.connections.length;
+    const diff = (index - this.currentIndex + this.connections.length) % this.connections.length;
     switch (diff) {
       case 0:
         return 'card-center';

@@ -1,12 +1,23 @@
 <div class="experience-container">
-  <h2 class="title">Experiência Profissional</h2>
 
-  <button (click)="toggleOrientation()" class="toggle-button">
-    <span class="icon">
-      {{ orientation === 'vertical' ? '➡️' : '⬇️' }}
-    </span>
-    Mudar para {{ orientation === 'vertical' ? 'horizontal' : 'vertical' }}
-  </button>
+  <div class="header">
+    <h2 class="title">Experiência Profissional</h2>
+
+    <button 
+      *ngIf="isDesktop" 
+      (click)="toggleOrientation()" 
+      class="toggle-button"
+    >
+      <span class="icon">
+        <span class="icon" 
+          [innerHTML]="orientation === 'vertical' 
+            ? '<i class=&quot;fas fa-angle-right&quot;></i>' 
+            : '<i class=&quot;fas fa-angle-down&quot;></i>'">
+        </span>
+      </span>
+      Mudar para {{ orientation === 'vertical' ? 'horizontal' : 'vertical' }}
+    </button>
+  </div>
 
   <div [ngClass]="orientation">
     <!-- Linha da timeline -->

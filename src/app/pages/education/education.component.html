@@ -1,15 +1,11 @@
 <h2 class="title">
-  🎓 Formação
+  Formação
 </h2>
 
 <div class="scroll-container" #scrollContainer>
   <div class="card" *ngFor="let edu of educations">
     <div class="icon">
-      <svg width="26" height="26" viewBox="0 0 640 512" fill="none"
-        xmlns="http://www.w3.org/2000/svg">
-        <path fill="#38bdf8"
-          d="M320 32L0 192l320 160 160-80v96h64v-128l96-48L320 32zM320 288L96 176l224-112 224 112-224 112zm-64 32.5L0 224v64l256 128V480l64 32 64-32v-64l256-128v-64L384 320.5v63.7l-64 32-64-32v-63.7z" />
-      </svg>
+      <lucide-icon [img]="GraduationCap"></lucide-icon>
     </div>
     <h4>{{ edu.institution }}</h4>
     <p><strong>{{ edu.course }}</strong></p>
@@ -17,13 +13,7 @@
     <p *ngIf="edu.description">{{ edu.description }}</p>
     <a *ngIf="edu.link" class="link" [href]="edu.link" target="_blank">
       Ver Certificados
-      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-        xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M2.25 9L14.25 9M10.5 13.5L14.4697 9.53033C14.7197 9.28033 14.8447 9.15533 14.8447 9C14.8447 8.84467 14.7197 8.71967 14.4697 8.46967L10.5 4.5"
-          stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round"
-          stroke-linejoin="round" />
-      </svg>
+      <lucide-icon [img]="ArrowRight"></lucide-icon>
     </a>
   </div>
 </div>
