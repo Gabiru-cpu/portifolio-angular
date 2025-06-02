@@ -1,45 +1,82 @@
 import { Component } from '@angular/core';
 import { SafePipe } from '../../pipes/safe.pipe';
 import { CommonModule } from '@angular/common';
+import { LucideAngularModule, ExternalLink, Github, ChevronLeft, ChevronRight } from 'lucide-angular';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [SafePipe, CommonModule],
+  imports: [SafePipe, CommonModule, LucideAngularModule],
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss'],
 })
 export class ProjectsComponent {
+  readonly ExternalLink = ExternalLink;
+  readonly Github = Github;
+  readonly ChevronLeft = ChevronLeft;
+  readonly ChevronRight = ChevronRight;
+
   projects = [
     {
-      description: 'Portfólio pessoal feito em Angular e Tailwind',
-      link: 'https://github.com/Gabiru-cpu/portifolio-angular',
-      videoUrl: 'https://www.youtube.com/embed/SEU_VIDEO_ID_1',
+      title: '.NET MVC com SQL Server',
+      description: 'Primeiro contato com MVC utilizando .NET C# em conjunto com Entity Framework.',
+      github: 'https://github.com/Gabiru-cpu/Projeto-MVC-DIO',
+      videoUrl: 'https://www.youtube.com/embed/NEa8U1-yjtY',
+      link: null,
     },
     {
-      description: 'Sistema de cadastro com Spring Boot',
-      link: 'https://github.com/Gabiru-cpu/seu-projeto',
-      videoUrl: 'https://www.youtube.com/embed/SEU_VIDEO_ID_2',
+      title: 'Looking for Sounds',
+      description: 'Projeto de conclusão do Curso Técnico em Design de Games.',
+      github: 'https://github.com/Gabiru-cpu/Looking-for-sounds',
+      videoUrl: 'https://www.youtube.com/embed/nN99xpbXLnM',
+      link: null,
     },
     {
-      description: 'Jogo plataforma feito em Unity',
-      link: 'https://gabiru-cpu.itch.io/seu-jogo',
-      videoUrl: 'https://www.youtube.com/embed/SEU_VIDEO_ID_3',
+      title: 'Clone do Steam Unlocked',
+      description: 'Projeto tentando recriar um website que consiste em um fórum de jogos.',
+      github: 'https://github.com/Gabiru-cpu/CloneSteamUnlocked',
+      videoUrl: 'https://www.youtube.com/embed/YIF9xwKM-4o',
+      link: null,
     },
     {
-      description: 'CRUD em Rust com Tauri',
-      link: 'https://github.com/Gabiru-cpu/tauri-rust-crud',
-      videoUrl: 'https://www.youtube.com/embed/SEU_VIDEO_ID_4',
+      title: 'MandarinBr Projeto',
+      description: 'Website responsivo criado durante o processo seletivo.',
+      github: 'https://github.com/Gabiru-cpu/MandarinBrProject',
+      videoUrl: 'https://www.youtube.com/embed/4yqyld7i6FA',
+      link: 'https://melodic-fudge-bbfe48.netlify.app',
     },
     {
-      description: 'Sistema Full Stack com Spring e Angular',
-      link: 'https://github.com/Gabiru-cpu/fullstack-app',
-      videoUrl: 'https://www.youtube.com/embed/SEU_VIDEO_ID_5',
+      title: 'Quiz Grupo 2',
+      description: 'Projeto desenvolvido com finalidade de fechar a apresentação de Arquitetura.',
+      github: 'https://github.com/Gabiru-cpu/Quiz-ADS-grupo2',
+      videoUrl: 'https://www.youtube.com/embed/_6Vk7t_tFdY',
+      link: null,
+    },
+    {
+      title: '.NET Web API com SQL Server',
+      description: 'Primeiro contato com APIs utilizando .NET C#.',
+      github: 'https://github.com/Gabiru-cpu/Modulo-API-DIO',
+      videoUrl: 'https://www.youtube.com/embed/8dxvuRxRfTE',
+      link: null,
+    },
+    {
+      title: 'Primeiro contato com desenvolvimento Web - Nlw3',
+      description: 'Meu primeiro contato fazendo um projeto chamado Happy.',
+      github: null,
+      videoUrl: 'https://www.youtube.com/embed/-4fvAqXiLtk',
+      link: null,
+    },
+    {
+      title: "Rum'n Boom",
+      description: 'Jogo Top-Down desenvolvido em grupo com o motor gráfico Unity.',
+      github: 'https://github.com/Gabiru-cpu/Rum-n-Boom',
+      videoUrl: 'https://www.youtube.com/embed/2GO6gWY7aCo',
+      link: null,
     },
   ];
 
+
   currentIndex = 0;
-  selectedVideo: string | null = null;
 
   next() {
     this.currentIndex = (this.currentIndex + 1) % this.projects.length;
@@ -66,13 +103,5 @@ export class ProjectsComponent {
       default:
         return 'hidden';
     }
-  }
-
-  openVideo(videoUrl: string) {
-    this.selectedVideo = videoUrl;
-  }
-
-  closeVideo() {
-    this.selectedVideo = null;
   }
 }

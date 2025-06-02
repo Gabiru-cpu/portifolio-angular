@@ -1,22 +1,46 @@
 <div class="container-3d" #rendererContainer></div>
 
-<div class="main">  
-  <div class="container">
-    <div class="left">
-      <div class="profile-pic">
-        <img src="assets/img/eu.png" alt="Foto de Gabriel Librande" />
-        <!-- <img src="assets/img/eu.png" style="transform: scaleX(-1);" alt="Foto de Gabriel Librande" /> -->
+<div class="main">
+  <div class="layout">
+
+    <!-- Foto -->
+    <div class="profile-pic">
+      <!-- Blob background -->
+      <div class="blob"></div>
+      
+      <!-- Símbolos animados -->
+      <div class="floating-symbols">
+        <div class="symbol" id="symbol1">{{ '{' }}{{ '}' }}</div>
+        <div class="symbol" id="symbol2">&lt;/&gt;</div>
+        <div class="symbol" id="symbol3">#</div>
+        <div class="symbol" id="symbol4">λ</div>
       </div>
+
+      <img src="assets/img/eu.png" alt="Foto de Gabriel Librande" />
     </div>
 
-    <div class="right">
-      <h1 class="fade-in">Gabriel H. Librande</h1>
-      <h2 class="fade-in-delay">Full Stack Developer</h2>
-
-      <h3 class="fade-in-more">Sobre mim</h3>
-      <p class="about-text fade-in-more">
+    <!-- Sobre mim -->
+    <div class="about">
+      <h1>Gabriel H. Librande</h1>
+      <h2>Full Stack Developer</h2>
+      <h3>Sobre mim</h3>
+      <p>
         Apaixonado por desenvolvimento de software, tecnologia e inovação. Sempre em busca de transformar ideias em soluções que gerem impacto.
       </p>
     </div>
+
+    <!-- Spotify -->
+    <div class="spotify">
+      <iframe 
+        src="https://open.spotify.com/embed/album/0gbJAL2rZwc77ra11uiHDu?utm_source=generator"
+        width="100%" 
+        height="352" 
+        frameborder="0" 
+        allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+    </div>
+
   </div>
 </div>

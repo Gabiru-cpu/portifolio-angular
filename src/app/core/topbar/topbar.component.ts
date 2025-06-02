@@ -32,4 +32,9 @@ export class TopbarComponent {
     console.log('Abrir menu lateral');
     this.animatorService.emitirToggleGirar();
   }
+
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  
 }
