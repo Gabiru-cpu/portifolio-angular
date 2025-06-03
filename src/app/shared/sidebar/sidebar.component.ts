@@ -23,4 +23,13 @@ export class SidebarComponent {
     this.animatorService.emitirToggleGirar();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
+
+  scrollToSection(sectionId: string) {
+  const section = document.getElementById(sectionId);
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth' });
+    this.animatorService.emitirToggleGirar();
+    this.closeSidebar();
+  }
+}
 }
