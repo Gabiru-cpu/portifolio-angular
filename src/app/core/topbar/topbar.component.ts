@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { LucideAngularModule, Menu, Sun, Languages } from 'lucide-angular';
 import { AnimatorService } from '../../services/animator.service';
+import { MenuService } from '../../services/menu.service';
 
 @Component({
   selector: 'app-topbar',
@@ -17,7 +18,10 @@ export class TopbarComponent {
 
   isDarkMode = false;
 
-  constructor(private animatorService: AnimatorService) {}
+  constructor(
+  private animatorService: AnimatorService,
+  private menuService: MenuService
+) {}
 
   toggleLanguage() {
     console.log('Trocar idioma');
@@ -31,6 +35,7 @@ export class TopbarComponent {
   toggleMenu() {
     console.log('Abrir menu lateral');
     this.animatorService.emitirToggleGirar();
+    this.menuService.toggleMenu();
   }
 
   scrollToTop() {

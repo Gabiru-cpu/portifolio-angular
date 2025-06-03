@@ -1,0 +1,19 @@
+<div 
+  class="sidebar-overlay" 
+  *ngIf="menuService.menuAberto$ | async"
+  (click)="closeSidebar()">
+</div>
+
+<div 
+  class="sidebar" 
+  [class.open]="menuService.menuAberto$ | async">
+
+  <nav class="menu">
+    <a (click)="closeSidebar(); scrollToTop()" class="menu-item">Início</a>
+    <a href="#skills" (click)="closeSidebar()" class="menu-item">Skills</a>
+    <a href="#experience" (click)="closeSidebar()" class="menu-item">Experiência</a>
+    <a href="#education" (click)="closeSidebar()" class="menu-item">Educação</a>
+    <a href="#projects" (click)="closeSidebar()" class="menu-item">Projetos</a>
+    <a href="#contact" (click)="closeSidebar()" class="menu-item">Contato</a>
+  </nav>
+</div>
