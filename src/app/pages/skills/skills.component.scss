@@ -115,6 +115,29 @@
   gap: 1rem;
   padding-top: 2px;
   margin-bottom: 1.5rem;
+  overflow-x: auto;
+  padding-bottom: 8px; // Espaço para a barra de scroll
+  
+  // Estilização da barra de scroll
+  &::-webkit-scrollbar {
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+    transition: background-color 0.3s;
+    
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+  }
+  
+  // Firefox
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0.1);
 
   button {
     padding: 0.5rem 1rem;
@@ -124,6 +147,7 @@
     color: #cbd5e1;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    flex-shrink: 0; // Impede que os botões encolham
 
     &:hover {
       background-color: rgba(255, 255, 255, 0.1);
@@ -149,5 +173,13 @@
   &.collapsed {
     max-height: 0;
     opacity: 0;
+  }
+}
+@media (max-width: 600px) {
+  .skill {
+    flex-direction: column;
+    align-items: normal !important;
+    
+    span{ width: auto !important; }
   }
 }

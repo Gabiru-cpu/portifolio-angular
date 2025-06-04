@@ -1,4 +1,6 @@
 <div class="carousel-container">
+  <h1 class="title">Projetos</h1>
+
   <div class="carousel">
     <div
       class="card"
@@ -16,7 +18,6 @@
         <p class="description">{{ project.description }}</p>
 
         <div class="actions">
-          <!-- Link externo se existir -->
           <a
             *ngIf="project.link"
             [href]="project.link"
@@ -27,7 +28,6 @@
             Acessar Site
           </a>
 
-          <!-- Github se existir -->
           <a
             *ngIf="project.github"
             [href]="project.github"
@@ -46,7 +46,7 @@
     <button class="arrow-page" (click)="previous()">
       <i class="fas fa-angle-left"></i>
     </button>
-    <button class="arrow-page" (click)="next()">      
+    <button class="arrow-page" (click)="next()">
       <i class="fas fa-angle-right"></i>
     </button>
   </div>

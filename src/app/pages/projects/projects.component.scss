@@ -9,6 +9,15 @@
   overflow: hidden;
 }
 
+.title {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+
 .carousel {
   position: relative;
   width: 100%;
@@ -195,3 +204,7 @@
 }
 
 .arrow-page{ z-index: 500; }
+
+@media (max-width: 767px) {
+  .card { width: 70vw; }  
+}
