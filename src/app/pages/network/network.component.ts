@@ -101,6 +101,24 @@ export class NetworkComponent implements OnInit, OnDestroy {
       img: 'https://i.pinimg.com/736x/54/e4/15/54e4154c316ce32a77b80817f7c78b49.jpg',
       linkedin: 'https://www.linkedin.com/in/helmuth-m-n-007/',
     },
+    {
+      name: 'Thiago Faccipieri',
+      role: 'Full-Stack Web Developer',
+      img: 'https://i.pinimg.com/736x/c9/09/52/c909521b4c76f40a94d6827495f5c573.jpg',
+      linkedin: 'https://www.linkedin.com/in/thiago-faccipieri/',
+    },
+    {
+      name: 'Fabio Toledo',
+      role: 'Head of IT',
+      img: 'https://i.pinimg.com/736x/bb/7f/49/bb7f496f6a071f5ceddf04d16bdea8d7.jpg',
+      linkedin: 'https://www.linkedin.com/in/toledux/',
+    },
+    {
+      name: 'Diego Munhoz',
+      role: 'Tech Lead',
+      img: 'https://i.pinimg.com/736x/d7/59/5a/d7595aa9f767a229940a5fcaf0aa168f.jpg',
+      linkedin: 'https://www.linkedin.com/in/diego-munhoz/',
+    },    
   ];
 
   currentIndex = 0;

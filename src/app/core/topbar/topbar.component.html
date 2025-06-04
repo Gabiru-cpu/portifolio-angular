@@ -10,7 +10,9 @@
       <lucide-icon [img]="Languages"></lucide-icon>
     </button>
     <button class="icon" (click)="toggleTheme()">
-      <lucide-icon [img]="Sun"></lucide-icon>
+      <!-- Mostra Sol ou Lua baseado no tema atual -->
+      <lucide-icon *ngIf="!isDarkMode" [img]="Sun"></lucide-icon>
+      <lucide-icon *ngIf="isDarkMode" [img]="Moon"></lucide-icon>
     </button>
     <button class="icon mr-5" (click)="toggleMenu()">
       <lucide-icon [img]="Menu"></lucide-icon>

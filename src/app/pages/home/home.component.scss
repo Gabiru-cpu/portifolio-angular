@@ -119,6 +119,10 @@
 /* Sobre mim */
 .about {
   max-width: 400px;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(2px);
+  border-radius: 1rem;
+  padding: 0 1rem;
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
