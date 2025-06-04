@@ -9,12 +9,12 @@
   [class.open]="menuService.menuAberto$ | async">
 
   <nav class="menu">
-    <a (click)="closeSidebar(); scrollToTop()" class="menu-item">Início</a>
-    <a (click)="scrollToSection('skills')" class="menu-item">Skills</a>
-    <a (click)="scrollToSection('experience')" class="menu-item">Experiência</a>
-    <a (click)="scrollToSection('education')" class="menu-item">Educação</a>
-    <a (click)="scrollToSection('projects')" class="menu-item">Projetos</a>
-    <a (click)="scrollToSection('contact')" class="menu-item">Contato</a>
+    <a (click)="closeSidebar(); scrollToTop()" class="menu-item">{{ 'HOME' | translate }}</a>
+    <a (click)="scrollToSection('skills')" class="menu-item">{{ 'SKILLS' | translate }}</a>
+    <a (click)="scrollToSection('experience')" class="menu-item">{{ 'EXPERIENCE' | translate }}</a>
+    <a (click)="scrollToSection('education')" class="menu-item">{{ 'EDUCATION' | translate }}</a>
+    <a (click)="scrollToSection('projects')" class="menu-item">{{ 'PROJECTS' | translate }}</a>
+    <a (click)="scrollToSection('contact')" class="menu-item">{{ 'CONTACT' | translate }}</a>
     <a (click)="scrollToSection('network')" class="menu-item">Network</a>
   </nav>
 </div>

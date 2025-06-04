@@ -1,7 +1,7 @@
 <div class="card">
   <div class="skills">
     <h3 (click)="toggleCollapse()" style="cursor: pointer;">
-      Habilidades
+      {{ 'SKILLS' | translate }}
       <span [style.transform]="isCollapsed ? 'rotate(-180deg)' : 'rotate(0deg)'" 
             style="display: inline-block; transition: transform 0.3s;">
         <i class="fas fa-angle-down ml-2"></i>
@@ -10,9 +10,9 @@
 
     <div [ngClass]="{'collapsed': isCollapsed}" class="collapse-wrapper">
       <div class="tabs">
-        <button (click)="activeTab = 'dev'" [class.active]="activeTab === 'dev'">Desenvolvimento</button>
+        <button (click)="activeTab = 'dev'" [class.active]="activeTab === 'dev'">{{ 'DEVELOPMENT' | translate }}</button>
         <button (click)="activeTab = 'gamedev'" [class.active]="activeTab === 'gamedev'">GameDev & UX</button>
-        <button (click)="activeTab = 'outros'" [class.active]="activeTab === 'outros'">Outros</button>
+        <button (click)="activeTab = 'outros'" [class.active]="activeTab === 'outros'">{{ 'OTHERS' | translate }}</button>
       </div>
 
       <!-- Desenvolvimento -->

@@ -4,11 +4,12 @@ import { Subscription } from 'rxjs';
 import * as THREE from 'three';
 import { ColladaLoader } from 'three/examples/jsm/loaders/ColladaLoader.js';
 import { AnimatorService } from '../../services/animator.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports:[LucideAngularModule],
+  imports:[LucideAngularModule, TranslateModule ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })

@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { SafePipe } from '../../pipes/safe.pipe';
 import { CommonModule } from '@angular/common';
 import { LucideAngularModule, ExternalLink, Github, ChevronLeft, ChevronRight } from 'lucide-angular';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [SafePipe, CommonModule, LucideAngularModule],
+  imports: [SafePipe, CommonModule, LucideAngularModule, TranslateModule],
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss'],
 })
