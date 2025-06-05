@@ -208,7 +208,7 @@
 .arrow-page{ z-index: 500; }
 
 @media (max-width: 767px) {
-  .card { width: 70vw; }
+  .card { width: 70vw; height: 55vh !important;}
   iframe {width: 65vw !important; height: 30vh !important;}
   .actions{
     a
