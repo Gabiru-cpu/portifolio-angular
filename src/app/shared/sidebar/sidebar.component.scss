@@ -16,7 +16,7 @@
   right: -300px;
   width: 280px;
   height: 100vh;
-  background: linear-gradient(135deg, #1e293b, #0f172a);
+  background: linear-gradient(135deg, var(--background-50), var(--background-100));
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
   z-index: 999;
   transition: transform 0.3s ease-out;
@@ -35,7 +35,7 @@
 }
 
 .menu-item {
-  color: #e2e8f0;
+  color: var(--text-950);
   text-decoration: none;
   font-size: 1.1rem;
   padding: 0.8rem 1rem;
@@ -46,8 +46,8 @@
   position: relative; /* Para posicionar a seta absolutamente */
   cursor: pointer;
   &:hover {
-    background-color: #334155;
-    color: #60a5fa;
+    background-color: var(--primary-200);
+    color: #0575fd;
     transform: translateX(-5px);
   }
   
