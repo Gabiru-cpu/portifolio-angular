@@ -16,28 +16,24 @@ export class ExperienceComponent implements OnInit {
 
   experiences = [
     {
-      year: '2021',
       role: 'Instrutor de Informática e Programação',
       company: 'Evolutime – Santos | Set 2021 – Ago 2022',
       summary:
         'Ministrei cursos de Desenvolvimento Web, Games e Informática, além de cuidar da infraestrutura de TI da escola.',
     },
     {
-      year: '2022',
       role: 'Suporte Técnico',
       company: 'Jota5 – Santos | Ago 2022 – Jun 2023',
       summary:
         'Suporte técnico de 1º nível, manutenção de redes, computadores e atendimento multicanal.',
     },
     {
-      year: '2023',
       role: 'Estagiário em Desenvolvimento',
       company: '7COMm – São Paulo | Jun 2023 – Jun 2024',
       summary:
         'Desenvolvimento de uma plataforma de questionários internos e processamento de PDFs, utilizando Spring Boot, Angular e MySQL.',
     },
     {
-      year: '2024',
       role: 'Desenvolvedor Full Stack Júnior',
       company: '7COMm – São Paulo | Jun 2024 – Presente',
       summary:
@@ -65,9 +61,29 @@ export class ExperienceComponent implements OnInit {
   @HostListener('window:scroll', [])
   onWindowScroll() {
     if (this.orientation === 'vertical') {
-      const scrollTop = window.scrollY;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      this.scrollProgress = (scrollTop / docHeight) * 130;
+      const timelineContainer = document.querySelector('.experience-container');
+      if (!timelineContainer) return;
+
+      const containerRect = timelineContainer.getBoundingClientRect();
+      const containerTop = containerRect.top + window.scrollY;
+      const containerHeight = containerRect.height;
+      const scrollPosition = window.scrollY;
+      const viewportHeight = window.innerHeight;
+
+      // Define quanto antes do topo queremos que comece (25% da altura da viewport)
+      const startOffset = viewportHeight * 1;
+
+      // Calcula a posição de início (quando o topo do container está startOffset pixels acima do topo da viewport)
+      const startPosition = containerTop - startOffset;
+
+      // Calcula a posição de término (base do container)
+      const endPosition = containerTop + containerHeight;
+
+      // Calcula o progresso (0 a 1) considerando o offset
+      let scrollRelative = (scrollPosition - startPosition) / (endPosition - startPosition);
+
+      // Limita entre 0% e 100%
+      this.scrollProgress = Math.min(Math.max(scrollRelative * 100, 0), 100);
     }
   }
 

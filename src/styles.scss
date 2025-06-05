@@ -9,12 +9,12 @@
 
 * { 
   font-family: "DM Sans", sans-serif;
-  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .d-flex { display: flex; }
 body { 
   background-color: var(--background-50);
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-[vw-access-button] { top: -150% !important; }
+[vw-access-button] { top: -200% !important; }

@@ -23,25 +23,23 @@
     <!-- Linha da timeline -->
     <div
       class="timeline-line"
-      [ngStyle]="
-        orientation === 'vertical' ? { 'height.%': scrollProgress } : {}
-      "
+      [ngStyle]="{
+        'height.%': orientation === 'vertical' ? scrollProgress : null
+      }"
     ></div>
 
     <!-- Itens da timeline -->
     <div
       class="timeline-item"
       *ngFor="let exp of experiences; let i = index"
+      [style.opacity]="orientation === 'vertical' ? (i * 5 <= scrollProgress ? 1 : 0.5) : 1"
       [attr.data-aos]="orientation === 'vertical' ? 'fade-up' : null"
       [attr.data-aos-delay]="orientation === 'vertical' ? i * 100 : null"
-      [attr.data-aos-duration]="orientation === 'vertical' ? 600 : null"
-      [attr.data-aos-easing]="orientation === 'vertical' ? 'ease-in-out' : null"
     >
       <div class="timeline-point"></div>
       <div class="timeline-content">
         <h3>{{ exp.role }}</h3>
         <p class="company">{{ exp.company }}</p>
-        <p class="year">{{ exp.year }}</p>
         <p class="summary">{{ exp.summary }}</p>
         <ul *ngIf="exp.achievements?.length">
           <li *ngFor="let item of exp.achievements">{{ item }}</li>

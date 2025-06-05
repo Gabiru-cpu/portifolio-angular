@@ -5,14 +5,14 @@
   justify-content: center;
   gap: 1rem;
   height: 100vh;
-  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  background: linear-gradient(to right, var(--background-200-projects), var(--background-300-projects), var(--background-400-projects));
   overflow: hidden;
 }
 
 .title {
-  color: white;
+  color: var(--text-950);
   font-size: 2rem;
-  margin-bottom: 2rem;
+  margin: 2rem 0;
   text-align: center;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
@@ -31,9 +31,9 @@
   position: absolute;
   top: 0;
   left: 50%;
-  width: 500px;
-  height: 400px;
-  background: white;
+  // width: 750px;
+  height: 520px;
+  background: var(--background-975);
   border-radius: 1rem;
   overflow: hidden;
   display: flex;
@@ -52,7 +52,7 @@
     left: 0;
     width: 100%;  // ocupa toda a largura
     height: 50%;  // ocupa metade da altura
-    background-color: #0c3ca3; // cor azul
+    background-color: var(--background-600);
     z-index: 1;
   }
 
@@ -67,21 +67,21 @@
     justify-content: space-between;
 
     h2 {
-      color: #111;
+      color: var(--text-card-h3);
       margin: 0;
     }
 
     .description {
       font-size: 0.9rem;
-      color: #444;
+      color: var(--text-card-p);
       margin-bottom: 0.5rem;
     }
 
     iframe {
-      width: 100%;
-      height: 230px;
+      width: 600px;
+      height: 340px;
       border-radius: 0.5rem;
-      box-shadow: 0 0 15px #0c3ca3, 0 0 30px #7596d8; // brilho ao redor
+      box-shadow: 0 0 15px var(--background-card), 0 0 30px var(--background-975); // brilho ao redor
     }
 
     .actions {
@@ -145,8 +145,10 @@
 
 .buttons {
   display: flex;
-  margin-top: 1.5rem;
-  gap: 3rem;
+  margin-top: 11rem;
+  padding-bottom: 1rem;
+  gap: 15rem;
+  z-index: 500;
   button {
     background-color: #111;
     color: white;
@@ -206,5 +208,18 @@
 .arrow-page{ z-index: 500; }
 
 @media (max-width: 767px) {
-  .card { width: 70vw; }  
+  .card { width: 70vw; }
+  iframe {width: 100% !important; height: 400px;}
+  .actions{
+    a
+    {
+      padding: 0.4rem 0.4rem !important;
+    }
+  }
+}
+
+//reponsividade no iphone SE
+@media (max-height: 668px) {
+  .card { width: 70vw; height: 450px;}
+  iframe {width: 100% !important; height: 200px !important;}
 }

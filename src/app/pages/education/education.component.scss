@@ -14,7 +14,8 @@
   .title {
     font-size: 2rem;
     font-weight: bold;
-    color: white;
+    color: var(--text-950);
+    text-shadow: 0 0 1px #aaa, 0 0 6px #888888de, 0 0 9px #666666de;
     text-align: center;
   }
 }
@@ -56,7 +57,10 @@
   border: 1px solid #2d3748;
   border-radius: 1rem;
   padding: 1.5rem;
-  background-color: #0f172a;
+  background-color: var(--background-card);
+  border: 1px solid var(--background-border-card);
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(13px);
   color: #f8fafc;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   scroll-snap-align: start;
@@ -70,7 +74,7 @@
     margin-bottom: 1rem;
 
     lucide-icon {
-        color: #38bdf8;
+        color: var(--primary-600);
     }
   }
 
@@ -78,12 +82,12 @@
     font-size: 1.1rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
-    color: #f1f5f9;
+    color: var(--text-card-h3);
   }
 
   p {
     font-size: 0.9rem;
-    color: #cbd5e1;
+    color: var(--text-card-p);
     line-height: 1.4;
     margin-bottom: 1rem;
   }
@@ -92,7 +96,7 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: #38bdf8;
+    color: var(--primary-600);
     font-weight: 600;
     font-size: 0.9rem;
     text-decoration: none;
@@ -103,7 +107,7 @@
     }
 
     svg {
-      stroke: #38bdf8;
+      stroke: var(--primary-600);
     }
   }
 

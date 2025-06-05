@@ -2,7 +2,7 @@
   h3 {
     margin-bottom: 1rem;
     font-size: 1.5rem;
-    color: #38bdf8;
+    color: var(--text-card-h3);
   }
 
   .skills-columns {
@@ -20,7 +20,7 @@
 
     h4 {
       margin-bottom: 0.5rem;
-      color: #93c5fd;
+      color: var(--text-card-h3);
     }
 
     .skill {
@@ -34,7 +34,7 @@
       align-items: center;
       gap: 0.5rem;
       width: 180px;
-      color: #cbd5e1;
+      color: var(--text-950);
 
         img {
           width: 28px;
@@ -96,8 +96,8 @@
 .card {
   margin-left: 5%;
   width: 90%;
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: var(--background-card);
+  border: 1px solid var(--background-border-card);
   border-radius: 1rem;
   padding: 1rem 2rem 0 2rem;
   backdrop-filter: blur(10px);
@@ -141,16 +141,15 @@
 
   button {
     padding: 0.5rem 1rem;
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: var(--background-tab);
+    border: 1px solid var(--background-border-tab);
     border-radius: 1rem;
-    color: #cbd5e1;
+    color: var(--text-950);
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
     flex-shrink: 0; // Impede que os botões encolham
-
+    transition: background-color 0.6s ease, border-color 0.6s ease, color 0.6s ease, transform 0.4s ease;
     &:hover {
-      background-color: rgba(255, 255, 255, 0.1);
+      background-color: var(--background-hover-tab);
       transform: translateY(-2px);
     }
 

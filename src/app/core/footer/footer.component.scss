@@ -1,14 +1,13 @@
 .footer {
   width: 100%;
   padding: 20px 40px;
-  background-color: #111;
-  color: #bbb;
+  background-color: var(--background-975);
+  color: var(--text-800);
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   gap: 16px;
-
   .info {
     display: flex;
     flex-direction: column;
@@ -24,13 +23,12 @@
       gap: 16px;
 
       a {
-        color: #bbb;
+        color: var(--text-800);
         text-decoration: none;
         font-size: 14px;
-        transition: color 0.3s;
 
         &:hover {
-          color: #00ffff;
+          color: var(--background-950);
         }
       }
     }
@@ -41,14 +39,15 @@
     gap: 20px;
 
     a {
-      color: #bbb;
+      color: var(--text-800);
       font-size: 24px;
-      transition: transform 0.3s, color 0.3s;
 
       &:hover {
-        color: #00ffff;
+        color: var(--background-950);
         transform: scale(1.2);
       }
     }
   }
 }
+
+*{*{transition: background-color 0.6s ease, border-color 0.6s ease, color 0.4s ease, transform 0.4s ease;}}
