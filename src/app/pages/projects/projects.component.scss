@@ -219,7 +219,7 @@
 }
 
 //reponsividade no iphone SE
-@media (max-height: 668px) {
+@media (max-height: 668px) and (max-width: 375px) {
   .card { width: 70vw; height: 450px;}
   iframe {width: 100% !important; height: 200px !important;}
 }
