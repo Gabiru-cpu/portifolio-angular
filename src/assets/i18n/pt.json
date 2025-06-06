@@ -13,7 +13,8 @@
 
   "EXPERIENCE": "Experiência",
   "PROFESSIONALEXPERIENCE": "Experiência Profissional",
-    "EXP_1_ROLE": "Instrutor de Informática e Programação",
+  "HVBTN": "Mudar para",
+  "EXP_1_ROLE": "Instrutor de Informática e Programação",
   "EXP_1_COMPANY": "Evolutime – Santos | Set 2021 – Jun 2022",
   "EXP_1_SUMMARY": "Ministrei cursos de Web, Games e Informática Empresarial, e gerenciei a infraestrutura de TI da escola.",
   "EXP_1_ACHIEVEMENTS": [
@@ -66,6 +67,8 @@
   "EDU_DESC_ONLINE": "Bradesco, USP, São Judas, DIO, Udemy e outros.",
 
   "PROJECTS": "Projetos",
+  "CODEBTN": "Ver Código",
+  "ACESSBTN": "Acessar Site",
   "PROJECT_1_TITLE": ".NET MVC com SQL Server",
   "PROJECT_1_DESC": "Primeiro contato com MVC utilizando .NET C# em conjunto com Entity Framework.",
 
