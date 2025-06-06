@@ -13,12 +13,84 @@
 
   "EXPERIENCE": "Experience",
   "PROFESSIONALEXPERIENCE": "Professional Experience",
+  "EXP_1_ROLE": "Computer Science and Programming Instructor",
+  "EXP_1_COMPANY": "Evolutime – Santos | Sep 2021 – Jun 2022",
+  "EXP_1_SUMMARY": "Taught Web, Games, and Business IT courses, and managed the school’s IT infrastructure.",
+  "EXP_1_ACHIEVEMENTS": [
+    "Planned and delivered practical and theoretical lessons aimed at the job market.",
+    "Maintained networks, computers, and development environments.",
+    "Participated in educational events and tech fairs."
+  ],
 
+  "EXP_2_ROLE": "Technical Support",
+  "EXP_2_COMPANY": "JOTA5 – Santos | Aug 2022 – Jun 2023",
+  "EXP_2_SUMMARY": "Provided first-level support, network maintenance, and multi-channel customer service for residential and corporate clients.",
+  "EXP_2_ACHIEVEMENTS": [
+    "Installed and configured PBXs, routers, and operating systems.",
+    "Opened and managed support tickets with detailed records.",
+    "Diagnosed and resolved hardware and software issues."
+  ],
+
+  "EXP_3_ROLE": "Development Intern",
+  "EXP_3_COMPANY": "7COMm – São Paulo | Jun 2023 – Jun 2024",
+  "EXP_3_SUMMARY": "Developed a questionnaire system with automated email sending using Angular, Spring Boot, and MySQL.",
+  "EXP_3_ACHIEVEMENTS": [
+    "Built an internal platform for questionnaire creation and management.",
+    "Processed and analyzed data extracted from PDFs.",
+    "Worked in the full agile development cycle: modeling, testing, and delivery."
+  ],
+
+  "EXP_4_ROLE": "Junior Full Stack Developer",
+  "EXP_4_COMPANY": "7COMm – São Paulo | Jun 2024 – Present",
+  "EXP_4_SUMMARY": "Work on modernizing Bradesco’s legacy systems and developing AI-based solutions for productivity and accessibility.",
+  "EXP_4_ACHIEVEMENTS": [
+    "Created ChatDev and ChatÁgil: AI-powered chats for tech support and agile methodologies.",
+    "Integrated Redis for caching and conversation history persistence.",
+    "Developed CNPJTNextGen, analyzing Git repos and suggesting adaptations for the new CNPJ with AI.",
+    "Automatically generated unit tests with AI from source code analysis.",
+    "Integrated libraries like PDF.js and VLibras for reading and accessibility."
+  ],
+  
 
   "EDUCATION": "Education",
+  "EDU_COURSE_FATEC": "Technology in Systems Analysis and Development",
+  "EDU_DATE_FATEC": "August 2024",
+  "EDU_DESC_FATEC": "Higher education focused on systems development, backend, frontend, and software architecture.",
 
+  "EDU_COURSE_EVOLUTIME": "Technical Course in Game Design and Development",
+  "EDU_DATE_EVOLUTIME": "August 2020",
+  "EDU_DESC_EVOLUTIME": "Technical course focused on digital game development, design, art, and programming.",
+
+  "EDU_COURSE_ONLINE": "Online Certifications",
+  "EDU_DATE_ONLINE": "Currently",
+  "EDU_DESC_ONLINE": "Bradesco, USP, São Judas, DIO, Udemy and others.",
 
   "PROJECTS": "Projects",
+  "PROJECT_1_TITLE": ".NET MVC with SQL Server",
+  "PROJECT_1_DESC": "First contact with MVC using .NET C# together with Entity Framework.",
+
+  "PROJECT_2_TITLE": "Looking for Sounds",
+  "PROJECT_2_DESC": "Final project of the Technical Course in Game Design.",
+
+  "PROJECT_3_TITLE": "Steam Unlocked Clone",
+  "PROJECT_3_DESC": "Project trying to recreate a website that works as a game forum.",
+
+  "PROJECT_4_TITLE": "MandarinBr Project",
+  "PROJECT_4_DESC": "Responsive website created during the selection process.",
+
+  "PROJECT_5_TITLE": "Quiz Group 2",
+  "PROJECT_5_DESC": "Project developed to close the Architecture class presentation.",
+
+  "PROJECT_6_TITLE": ".NET Web API with SQL Server",
+  "PROJECT_6_DESC": "First contact with APIs using .NET C#.",
+
+  "PROJECT_7_TITLE": "First contact with Web Development - Nlw3",
+  "PROJECT_7_DESC": "My first contact making a project called Happy.",
+
+  "PROJECT_8_TITLE": "Rum'n Boom",
+  "PROJECT_8_DESC": "Top-down game developed in a group using Unity engine.",
+
+
 
 
   "CONTACT": "Contact",
