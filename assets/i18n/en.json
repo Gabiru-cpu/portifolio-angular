@@ -13,6 +13,7 @@
 
   "EXPERIENCE": "Experience",
   "PROFESSIONALEXPERIENCE": "Professional Experience",
+  "HVBTN": "Switch to",
   "EXP_1_ROLE": "Computer Science and Programming Instructor",
   "EXP_1_COMPANY": "Evolutime – Santos | Sep 2021 – Jun 2022",
   "EXP_1_SUMMARY": "Taught Web, Games, and Business IT courses, and managed the school’s IT infrastructure.",
@@ -50,7 +51,7 @@
     "Automatically generated unit tests with AI from source code analysis.",
     "Integrated libraries like PDF.js and VLibras for reading and accessibility."
   ],
-  
+
 
   "EDUCATION": "Education",
   "EDU_COURSE_FATEC": "Technology in Systems Analysis and Development",
@@ -66,6 +67,8 @@
   "EDU_DESC_ONLINE": "Bradesco, USP, São Judas, DIO, Udemy and others.",
 
   "PROJECTS": "Projects",
+  "CODEBTN": "See Code",
+  "ACESSBTN": "Visit Website",
   "PROJECT_1_TITLE": ".NET MVC with SQL Server",
   "PROJECT_1_DESC": "First contact with MVC using .NET C# together with Entity Framework.",
 
