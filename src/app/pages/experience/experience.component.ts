@@ -16,34 +16,47 @@ export class ExperienceComponent implements OnInit {
 
   experiences = [
     {
-      role: 'Instrutor de Informática e Programação',
-      company: 'Evolutime – Santos | Set 2021 – Ago 2022',
-      summary:
-        'Ministrei cursos de Desenvolvimento Web, Games e Informática, além de cuidar da infraestrutura de TI da escola.',
-    },
-    {
-      role: 'Suporte Técnico',
-      company: 'Jota5 – Santos | Ago 2022 – Jun 2023',
-      summary:
-        'Suporte técnico de 1º nível, manutenção de redes, computadores e atendimento multicanal.',
-    },
-    {
-      role: 'Estagiário em Desenvolvimento',
-      company: '7COMm – São Paulo | Jun 2023 – Jun 2024',
-      summary:
-        'Desenvolvimento de uma plataforma de questionários internos e processamento de PDFs, utilizando Spring Boot, Angular e MySQL.',
-    },
-    {
-      role: 'Desenvolvedor Full Stack Júnior',
-      company: '7COMm – São Paulo | Jun 2024 – Presente',
-      summary:
-        'Atuo na manutenção e evolução de sistemas legados para o Bradesco, além de desenvolver soluções com IA como ChatDev, ChatÁgil e CNPJTNextGen.',
+      role: 'EXP_1_ROLE',
+      company: 'EXP_1_COMPANY',
+      summary: 'EXP_1_SUMMARY',
       achievements: [
-        'Implantação de IA generativa para automação de processos internos.',
-        'Contribuição na modernização de sistemas legados.',
-        'Criação de microsserviços utilizando Spring Boot e Angular.',
-      ],
+        'EXP_1_ACHIEVEMENTS.0',
+        'EXP_1_ACHIEVEMENTS.1',
+        'EXP_1_ACHIEVEMENTS.2'
+      ]
     },
+    {
+      role: 'EXP_2_ROLE',
+      company: 'EXP_2_COMPANY',
+      summary: 'EXP_2_SUMMARY',
+      achievements: [
+        'EXP_2_ACHIEVEMENTS.0',
+        'EXP_2_ACHIEVEMENTS.1',
+        'EXP_2_ACHIEVEMENTS.2'
+      ]
+    },
+    {
+      role: 'EXP_3_ROLE',
+      company: 'EXP_3_COMPANY',
+      summary: 'EXP_3_SUMMARY',
+      achievements: [
+        'EXP_3_ACHIEVEMENTS.0',
+        'EXP_3_ACHIEVEMENTS.1',
+        'EXP_3_ACHIEVEMENTS.2'
+      ]
+    },
+    {
+      role: 'EXP_4_ROLE',
+      company: 'EXP_4_COMPANY',
+      summary: 'EXP_4_SUMMARY',
+      achievements: [
+        'EXP_4_ACHIEVEMENTS.0',
+        'EXP_4_ACHIEVEMENTS.1',
+        'EXP_4_ACHIEVEMENTS.2',
+        'EXP_4_ACHIEVEMENTS.3',
+        'EXP_4_ACHIEVEMENTS.4'
+      ]
+    }
   ];
 
   ngOnInit() {

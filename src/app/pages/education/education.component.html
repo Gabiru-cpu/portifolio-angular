@@ -9,9 +9,9 @@
         <lucide-icon [img]="GraduationCap"></lucide-icon>
       </div>
       <h4>{{ edu.institution }}</h4>
-      <p><strong>{{ edu.course }}</strong></p>
-      <p>{{ edu.date }}</p>
-      <p *ngIf="edu.description">{{ edu.description }}</p>
+      <p><strong>{{ edu.course | translate }}</strong></p>
+      <p>{{ edu.date | translate }}</p>
+      <p *ngIf="edu.description">{{ edu.description | translate }}</p>
       <a *ngIf="edu.link" class="link" [href]="edu.link" target="_blank">
         Ver Certificados
         <lucide-icon [img]="ArrowRight"></lucide-icon>

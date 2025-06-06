@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-topbar',
   standalone: true,
-  imports: [CommonModule ,LucideAngularModule, TranslateModule],
+  imports: [CommonModule, LucideAngularModule, TranslateModule],
   templateUrl: './topbar.component.html',
   styleUrl: './topbar.component.scss',
 })
@@ -26,19 +26,32 @@ export class TopbarComponent implements OnInit {
     private menuService: MenuService,
     private translate: TranslateService
   ) {
-    // Define o idioma padrão como 'pt'
-    this.translate.setDefaultLang('pt');
-
-    // Usa o idioma salvo no localStorage ou 'pt' como padrão
-    const savedLang = localStorage.getItem('lang') || 'pt';
-    this.translate.use(savedLang);
+    // Verifica se há idioma salvo no localStorage
+    const savedLang = localStorage.getItem('lang');
+    
+    // Se não houver idioma salvo, usa o idioma do navegador
+    const browserLang = this.getBrowserLanguage();
+    const defaultLang = browserLang === 'pt' ? 'pt' : 'en';
+    
+    this.translate.setDefaultLang(defaultLang);
+    this.translate.use(savedLang || defaultLang);
   }
 
   ngOnInit() {
-    // Verifica o tema salvo no localStorage ou prefere o light
     const savedTheme = localStorage.getItem('theme');
     this.isDarkMode = savedTheme === 'dark';
     this.applyTheme();
+  }
+
+  // Método para detectar o idioma do navegador
+  private getBrowserLanguage(): string {
+    if (typeof window !== 'undefined' && window.navigator) {
+      const browserLang = window.navigator.language || 
+                         (window.navigator as any).userLanguage || 
+                         'en';
+      return browserLang.split('-')[0].toLowerCase();
+    }
+    return 'en';
   }
 
   toggleLanguage() {

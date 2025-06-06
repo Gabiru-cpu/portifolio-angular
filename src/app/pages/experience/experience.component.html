@@ -38,11 +38,11 @@
     >
       <div class="timeline-point"></div>
       <div class="timeline-content">
-        <h3>{{ exp.role }}</h3>
-        <p class="company">{{ exp.company }}</p>
-        <p class="summary">{{ exp.summary }}</p>
+        <h3>{{ exp.role | translate }}</h3>
+        <p class="company">{{ exp.company | translate }}</p>
+        <p class="summary">{{ exp.summary | translate }}</p>
         <ul *ngIf="exp.achievements?.length">
-          <li *ngFor="let item of exp.achievements">{{ item }}</li>
+          <li *ngFor="let item of exp.achievements">{{ item | translate }}</li>
         </ul>
       </div>
     </div>

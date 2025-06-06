@@ -18,27 +18,25 @@ export class EducationComponent {
   educations = [
     {
       institution: 'Fatec Rubens Lara',
-      course: 'Tecnólogo em Análise e Desenvolvimento de Sistemas',
-      date: 'Agosto 2024',
-      description: 'Formação superior focada em desenvolvimento de sistemas, backend, frontend e arquitetura de software.',
-      // link: 'https://drive.google.com/drive/folder_link'
+      course: 'EDU_COURSE_FATEC',
+      date: 'EDU_DATE_FATEC',
+      description: 'EDU_DESC_FATEC',
     },
     {
       institution: 'Evolutime',
-      course: 'Técnico em Design e Desenvolvimento de Jogos',
-      date: 'Agosto 2020',
-      description: 'Curso técnico com foco em desenvolvimento de jogos digitais, design, arte e programação.',
-      // link: 'https://drive.google.com/drive/folder_link'
+      course: 'EDU_COURSE_EVOLUTIME',
+      date: 'EDU_DATE_EVOLUTIME',
+      description: 'EDU_DESC_EVOLUTIME',
     },
-
     {
-      institution: 'Cursos Online',
-      course: 'Certificações Diversas',
-      date: 'Atualmente',
-      description: 'Bradesco, USP, São Judas, DIO, Udemy e outros.',
+      institution: 'Online',
+      course: 'EDU_COURSE_ONLINE',
+      date: 'EDU_DATE_ONLINE',
+      description: 'EDU_DESC_ONLINE',
       link: 'https://drive.google.com/drive/folders/1Kv-ZGFEasx4nqjNxJSEakYsehtHyyDUN?usp=sharing'
     }
   ];
+
 
   isDown = false;
   startX = 0;
@@ -68,7 +66,7 @@ export class EducationComponent {
       if (!this.isDown) return;
       e.preventDefault();
       const x = e.pageX - container.offsetLeft;
-      const walk = (x - this.startX) * 1; // 👈 Diminui a velocidade (era 1.5)
+      const walk = (x - this.startX) * 1;
       container.scrollLeft = this.scrollLeft - walk;
     });
   }
