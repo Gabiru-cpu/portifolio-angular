@@ -74,6 +74,48 @@ export class ProjectsComponent {
       videoUrl: 'https://www.youtube.com/embed/2GO6gWY7aCo',
       link: null,
     },
+    {
+      title: 'PROJECT_9_TITLE',
+      description: 'PROJECT_9_DESC',
+      github: 'https://github.com/Gabiru-cpu/TaskManager',
+      videoUrl: 'https://www.youtube.com/embed/-x0y2xosfsM',
+      link: null,
+    },
+    {
+      title: 'PROJECT_10_TITLE',
+      description: 'PROJECT_10_DESC',
+      github: 'https://github.com/Gabiru-cpu/FlappyFatec',
+      videoUrl: 'https://www.youtube.com/embed/kH33KZIigXA',
+      link: null,
+    },
+    {
+      title: 'PROJECT_11_TITLE',
+      description: 'PROJECT_11_DESC',
+      github: 'https://github.com/Gabiru-cpu/backendpizzaria',
+      videoUrl: 'https://www.youtube.com/embed/PhJXZFEnv4E',
+      link: null,
+    },
+    {
+      title: 'PROJECT_12_TITLE',
+      description: 'PROJECT_12_DESC',
+      github: 'https://github.com/Gabiru-cpu/Pet-All-Friendly',
+      videoUrl: 'https://www.youtube.com/embed/c1yY0F8cxaw',
+      link: null,
+    },
+    {
+      title: 'PROJECT_13_TITLE',
+      description: 'PROJECT_13_DESC',
+      github: 'https://github.com/Gabiru-cpu/P2-Topicos-Especias',
+      videoUrl: 'https://www.youtube.com/embed/eHnoJbCsdAE',
+      link: null,
+    },
+    {
+      title: 'PROJECT_14_TITLE',
+      description: 'PROJECT_14_DESC',
+      github: 'https://github.com/Gabiru-cpu/ADS-TCC',
+      videoUrl: 'https://www.youtube.com/embed/CD-4PGVZeyY',
+      link: null,
+    },
   ];
 
 

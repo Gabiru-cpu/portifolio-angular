@@ -93,6 +93,23 @@
   "PROJECT_8_TITLE": "Rum'n Boom",
   "PROJECT_8_DESC": "Jogo Top-Down desenvolvido em grupo com o motor gráfico Unity.",
 
+  "PROJECT_9_TITLE": "TaskManager",
+  "PROJECT_9_DESC": "Sistema em .NET e Angular para criação e gerenciamento de tarefas com autenticação.",
+
+  "PROJECT_10_TITLE": "Flappy Bird: Shrek",
+  "PROJECT_10_DESC": "Versão humorística do Flappy Bird com Unity 2D. Controle o Shrek e desvie dos obstáculos.",
+
+    "PROJECT_11_TITLE": "Gestor de Ingredientes",
+  "PROJECT_11_DESC": "Sistema completo de gestão para pizzaria com frontend em Flask e backend em Spring Boot.",
+
+  "PROJECT_12_TITLE": "Pet All Friendly",
+  "PROJECT_12_DESC": "Sistema para cuidados de pets silvestres e domésticos com APIs externas, foco em acessibilidade e design responsivo.",
+
+  "PROJECT_13_TITLE": "Rhayadh & Vitor: Saving the Forest",
+  "PROJECT_13_DESC": "Jogo cooperativo com temática ambiental, onde dois heróis salvam animais em extinção no Brasil.",
+
+  "PROJECT_14_TITLE": "Xingu",
+  "PROJECT_14_DESC": "Jogo mundo aberto baseado na cultura indígena brasileira e mitologias do folclore nacional.",
 
 
   "CONTACT": "Contato",

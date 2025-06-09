@@ -1,162 +1,164 @@
-<div class="card">
-  <div class="skills">
-    <h3 (click)="toggleCollapse()" style="cursor: pointer;">
-      {{ 'SKILLS' | translate }}
-      <span [style.transform]="isCollapsed ? 'rotate(-180deg)' : 'rotate(0deg)'" 
-            style="display: inline-block; transition: transform 0.3s;">
-        <i class="fas fa-angle-down ml-2"></i>
-      </span>
-    </h3>
-
-    <div [ngClass]="{'collapsed': isCollapsed}" class="collapse-wrapper">
-      <div class="tabs">
-        <button (click)="activeTab = 'dev'" [class.active]="activeTab === 'dev'">{{ 'DEVELOPMENT' | translate }}</button>
-        <button (click)="activeTab = 'gamedev'" [class.active]="activeTab === 'gamedev'">GameDev & UX</button>
-        <button (click)="activeTab = 'outros'" [class.active]="activeTab === 'outros'">{{ 'OTHERS' | translate }}</button>
-      </div>
-
-      <!-- Desenvolvimento -->
-      <div *ngIf="activeTab === 'dev'" class="skills-columns">
-        <div class="column">
-          <div class="skill-category">
-            <h4>Frontend</h4>
-            <div class="skill">
-              <span><img src="assets/icons/angular.png" alt="Angular logo">Angular</span>
-              <div class="bar"><div class="progress angular" style="width: 90%;"></div></div>
+<div class="skill-container">
+  <div class="card">
+    <div class="skills">
+      <h3 (click)="toggleCollapse()" style="cursor: pointer;">
+        {{ 'SKILLS' | translate }}
+        <span [style.transform]="isCollapsed ? 'rotate(-180deg)' : 'rotate(0deg)'" 
+              style="display: inline-block; transition: transform 0.3s;">
+          <i class="fas fa-angle-down ml-2"></i>
+        </span>
+      </h3>
+    
+      <div [ngClass]="{'collapsed': isCollapsed}" class="collapse-wrapper">
+        <div class="tabs">
+          <button (click)="activeTab = 'dev'" [class.active]="activeTab === 'dev'">{{ 'DEVELOPMENT' | translate }}</button>
+          <button (click)="activeTab = 'gamedev'" [class.active]="activeTab === 'gamedev'">GameDev & UX</button>
+          <button (click)="activeTab = 'outros'" [class.active]="activeTab === 'outros'">{{ 'OTHERS' | translate }}</button>
+        </div>
+      
+        <!-- Desenvolvimento -->
+        <div *ngIf="activeTab === 'dev'" class="skills-columns">
+          <div class="column">
+            <div class="skill-category">
+              <h4>Frontend</h4>
+              <div class="skill">
+                <span><img src="assets/icons/angular.png" alt="Angular logo">Angular</span>
+                <div class="bar"><div class="progress angular" style="width: 90%;"></div></div>
+              </div>
+              <div class="skill">
+                <span><img src="assets/icons/react.png" alt="React logo">React</span>
+                <div class="bar"><div class="progress react" style="width: 70%;"></div></div>
+              </div>
+              <div class="skill">
+                <span><img style="width: 55px; height: auto;" src="assets/icons/html.png" alt="HTML logo">HTML / CSS / JS</span>
+                <div class="bar"><div class="progress html" style="width: 95%;"></div></div>
+              </div>
+              <div class="skill">
+                <span><img src="assets/icons/tailwindbootstrap.png" alt="Tailwind e Bootstrap logo">Tailwind / Bootstrap</span>
+                <div class="bar"><div class="progress tailwindbootstrap" style="width: 85%;"></div></div>
+              </div>
             </div>
-            <div class="skill">
-              <span><img src="assets/icons/react.png" alt="React logo">React</span>
-              <div class="bar"><div class="progress react" style="width: 70%;"></div></div>
+          
+            <div class="skill-category">
+              <h4>Backend</h4>
+              <div class="skill">
+                <span><img src="assets/icons/spring.png" alt="Spring logo">Spring Boot</span>
+                <div class="bar"><div class="progress spring" style="width: 90%;"></div></div>
+              </div>
+              <div class="skill">
+                <span><img src="assets/icons/net.png" alt=".NET logo">C# .NET</span>
+                <div class="bar"><div class="progress net" style="width: 90%;"></div></div>
+              </div>
+              <div class="skill">
+                <span><img src="assets/icons/laravel.png" alt="Laravel logo">Laravel</span>
+                <div class="bar"><div class="progress laravel" style="width: 60%;"></div></div>
+              </div>
             </div>
-            <div class="skill">
-              <span><img style="width: 55px; height: auto;" src="assets/icons/html.png" alt="HTML logo">HTML / CSS / JS</span>
-              <div class="bar"><div class="progress html" style="width: 95%;"></div></div>
-            </div>
-            <div class="skill">
-              <span><img src="assets/icons/tailwindbootstrap.png" alt="Tailwind e Bootstrap logo">Tailwind / Bootstrap</span>
-              <div class="bar"><div class="progress tailwindbootstrap" style="width: 85%;"></div></div>
-            </div>
-          </div>
-
-          <div class="skill-category">
-            <h4>Backend</h4>
-            <div class="skill">
-              <span><img src="assets/icons/spring.png" alt="Spring logo">Spring Boot</span>
-              <div class="bar"><div class="progress spring" style="width: 90%;"></div></div>
-            </div>
-            <div class="skill">
-              <span><img src="assets/icons/net.png" alt=".NET logo">C# .NET</span>
-              <div class="bar"><div class="progress net" style="width: 90%;"></div></div>
-            </div>
-            <div class="skill">
-              <span><img src="assets/icons/laravel.png" alt="Laravel logo">Laravel</span>
-              <div class="bar"><div class="progress laravel" style="width: 60%;"></div></div>
-            </div>
-          </div>
-
-          <div class="skill-category">
-            <h4>Banco de Dados</h4>
-            <div class="skill">
-              <span><img src="assets/icons/mypostsql.png" alt="MySQL e PostgreSQL logo">MySQL / PostgreSQL</span>
-              <div class="bar"><div class="progress mypostsql" style="width: 85%;"></div></div>
-            </div>
-            <div class="skill">
-              <span><img src="assets/icons/sqlserver.png" alt="SQL Server logo">SQL Server</span>
-              <div class="bar"><div class="progress sqlserver" style="width: 70%;"></div></div>
-            </div>
-            <div class="skill">
-              <span><img src="assets/icons/mongodb.png" alt="MongoDB logo">MongoDB</span>
-              <div class="bar"><div class="progress mongodb" style="width: 65%;"></div></div>
-            </div>
-            <div class="skill">
-              <span><img src="assets/icons/redis.png" alt="Redis logo">Redis</span>
-              <div class="bar"><div class="progress redis" style="width: 60%;"></div></div>
+          
+            <div class="skill-category">
+              <h4>Banco de Dados</h4>
+              <div class="skill">
+                <span><img src="assets/icons/mypostsql.png" alt="MySQL e PostgreSQL logo">MySQL / PostgreSQL</span>
+                <div class="bar"><div class="progress mypostsql" style="width: 85%;"></div></div>
+              </div>
+              <div class="skill">
+                <span><img src="assets/icons/sqlserver.png" alt="SQL Server logo">SQL Server</span>
+                <div class="bar"><div class="progress sqlserver" style="width: 70%;"></div></div>
+              </div>
+              <div class="skill">
+                <span><img src="assets/icons/mongodb.png" alt="MongoDB logo">MongoDB</span>
+                <div class="bar"><div class="progress mongodb" style="width: 65%;"></div></div>
+              </div>
+              <div class="skill">
+                <span><img src="assets/icons/redis.png" alt="Redis logo">Redis</span>
+                <div class="bar"><div class="progress redis" style="width: 60%;"></div></div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <!-- GameDev -->
-      <div *ngIf="activeTab === 'gamedev'" class="skills-columns">
-        <div class="column">
-          <div class="skill-category">
-            <h4>GameDev</h4>
-            <div class="skill">
-              <span><img src="assets/icons/unity.png" alt="Unity logo">Unity</span>
-              <div class="bar"><div class="progress unity" style="width: 90%;"></div></div>
+      
+        <!-- GameDev -->
+        <div *ngIf="activeTab === 'gamedev'" class="skills-columns">
+          <div class="column">
+            <div class="skill-category">
+              <h4>GameDev</h4>
+              <div class="skill">
+                <span><img src="assets/icons/unity.png" alt="Unity logo">Unity</span>
+                <div class="bar"><div class="progress unity" style="width: 90%;"></div></div>
+              </div>
+              <div class="skill">
+                <span><img src="assets/icons/blender.png" alt="Blender logo">Blender</span>
+                <div class="bar"><div class="progress blender" style="width: 70%;"></div></div>
+              </div>
+              <div class="skill">
+                <span><img src="assets/icons/unreal.png" alt="Unreal logo">Unreal</span>
+                <div class="bar"><div class="progress unreal" style="width: 50%;"></div></div>
+              </div>
+              <div class="skill">
+                <span><img src="assets/icons/godot.png" alt="Godot logo">Godot</span>
+                <div class="bar"><div class="progress godot" style="width: 55%;"></div></div>
+              </div>
+              <div class="skill">
+                <span><img src="assets/icons/gamemaker.png" alt="Game Maker logo">Game Maker</span>
+                <div class="bar"><div class="progress gamemaker" style="width: 55%;"></div></div>
+              </div>
             </div>
-            <div class="skill">
-              <span><img src="assets/icons/blender.png" alt="Blender logo">Blender</span>
-              <div class="bar"><div class="progress blender" style="width: 70%;"></div></div>
-            </div>
-            <div class="skill">
-              <span><img src="assets/icons/unreal.png" alt="Unreal logo">Unreal</span>
-              <div class="bar"><div class="progress unreal" style="width: 50%;"></div></div>
-            </div>
-            <div class="skill">
-              <span><img src="assets/icons/godot.png" alt="Godot logo">Godot</span>
-              <div class="bar"><div class="progress godot" style="width: 55%;"></div></div>
-            </div>
-            <div class="skill">
-              <span><img src="assets/icons/gamemaker.png" alt="Game Maker logo">Game Maker</span>
-              <div class="bar"><div class="progress gamemaker" style="width: 55%;"></div></div>
-            </div>
-          </div>
-
-          <div class="skill-category">
-            <h4>UX</h4>
-            <div class="skill">
-              <span><img src="assets/icons/figma.png" alt="Figma logo">Figma</span>
-              <div class="bar"><div class="progress figma" style="width: 40%;"></div></div>
-            </div>
-            <div class="skill">
-              <span><img src="assets/icons/photoshop.png" alt="Photoshop logo">Photoshop</span>
-              <div class="bar"><div class="progress photoshop" style="width: 50%;"></div></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Outros -->
-      <div *ngIf="activeTab === 'outros'" class="skills-columns">
-        <div class="column">
-          <div class="skill-category">
-            <h4>Plataformas & Ferramentas</h4>
-            <div class="skill">
-              <span><img src="assets/icons/docker.png" alt="Docker logo">Docker</span>
-              <div class="bar"><div class="progress docker" style="width: 65%;"></div></div>
-            </div>
-            <div class="skill">
-              <span><img src="assets/icons/git.png" alt="Git logo">Git</span>
-              <div class="bar"><div class="progress git" style="width: 90%;"></div></div>
-            </div>
-            <div class="skill">
-              <span><img src="assets/icons/azure.png" alt="Azure logo">Azure</span>
-              <div class="bar"><div class="progress azure" style="width: 55%;"></div></div>
-            </div>
-            <div class="skill">
-              <span><img src="assets/icons/postman.png" alt="Postman logo">Postman</span>
-              <div class="bar"><div class="progress postman" style="width: 95%;"></div></div>
-            </div>
-          </div>
-
-          <div class="skill-category">
-            <h4>Metodologias Ágeis</h4>
-            <div class="skill">
-              <span><img src="assets/icons/scrum.png" alt="Scrum logo">Scrum</span>
-              <div class="bar"><div class="progress scrum" style="width: 85%;"></div></div>
-            </div>
-            <div class="skill">
-              <span><img src="assets/icons/kanban.png" alt="Kanban logo">Kanban</span>
-              <div class="bar"><div class="progress kanban" style="width: 80%;"></div></div>
-            </div>
-            <div class="skill">
-              <span><img src="assets/icons/lean.png" alt="Lean logo">Lean</span>
-              <div class="bar"><div class="progress lean" style="width: 75%;"></div></div>
+          
+            <div class="skill-category">
+              <h4>UX</h4>
+              <div class="skill">
+                <span><img src="assets/icons/figma.png" alt="Figma logo">Figma</span>
+                <div class="bar"><div class="progress figma" style="width: 40%;"></div></div>
+              </div>
+              <div class="skill">
+                <span><img src="assets/icons/photoshop.png" alt="Photoshop logo">Photoshop</span>
+                <div class="bar"><div class="progress photoshop" style="width: 50%;"></div></div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>    
+      
+        <!-- Outros -->
+        <div *ngIf="activeTab === 'outros'" class="skills-columns">
+          <div class="column">
+            <div class="skill-category">
+              <h4>Plataformas & Ferramentas</h4>
+              <div class="skill">
+                <span><img src="assets/icons/docker.png" alt="Docker logo">Docker</span>
+                <div class="bar"><div class="progress docker" style="width: 65%;"></div></div>
+              </div>
+              <div class="skill">
+                <span><img src="assets/icons/git.png" alt="Git logo">Git</span>
+                <div class="bar"><div class="progress git" style="width: 90%;"></div></div>
+              </div>
+              <div class="skill">
+                <span><img src="assets/icons/azure.png" alt="Azure logo">Azure</span>
+                <div class="bar"><div class="progress azure" style="width: 55%;"></div></div>
+              </div>
+              <div class="skill">
+                <span><img src="assets/icons/postman.png" alt="Postman logo">Postman</span>
+                <div class="bar"><div class="progress postman" style="width: 95%;"></div></div>
+              </div>
+            </div>
+          
+            <div class="skill-category">
+              <h4>Metodologias Ágeis</h4>
+              <div class="skill">
+                <span><img src="assets/icons/scrum.png" alt="Scrum logo">Scrum</span>
+                <div class="bar"><div class="progress scrum" style="width: 85%;"></div></div>
+              </div>
+              <div class="skill">
+                <span><img src="assets/icons/kanban.png" alt="Kanban logo">Kanban</span>
+                <div class="bar"><div class="progress kanban" style="width: 80%;"></div></div>
+              </div>
+              <div class="skill">
+                <span><img src="assets/icons/lean.png" alt="Lean logo">Lean</span>
+                <div class="bar"><div class="progress lean" style="width: 75%;"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>    
+    </div>
   </div>
 </div>
