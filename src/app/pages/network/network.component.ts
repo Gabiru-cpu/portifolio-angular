@@ -13,7 +13,7 @@ export class NetworkComponent implements OnInit, OnDestroy {
   connections = [
     {
       name: 'Vinicius Ferreira',
-      role: 'UI/UX Designer',
+      role: 'Digital Product Designer',
       img: 'https://i.pinimg.com/736x/39/83/f5/3983f515d4b850dfac211fbc75b0c714.jpg',
       linkedin: 'https://www.linkedin.com/in/viniciusferreiraflorencio/',
     },
