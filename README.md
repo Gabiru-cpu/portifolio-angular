@@ -42,21 +42,13 @@ Este portfólio tem como objetivo:
 
 - 📧 **Email:** gabriel_librande@hotmail.com
 - 📱 **WhatsApp:** +55 13 99117-3234
-- 💼 **LinkedIn:** [linkedin.com/in/seuperfil](https://linkedin.com)
+- 💼 **LinkedIn:** [linkedin.com/in/gabriel-librande/](https://linkedin.com)
 - 🐙 **GitHub:** [github.com/gabiru-cpu](https://github.com/gabiru-cpu)
 
 ---
 
-## 🧠 Melhorias Futuras
+## 🧠 Implementações feitas
 
 - 🌙 Tema escuro/claro
 - 🌍 Suporte multilíngue (Português / Inglês)
 - 📱 Melhor responsividade mobile
-
----
-
-## 🏷️ Licença
-
-Este projeto é de uso pessoal e não possui licença específica no momento.
-
----
