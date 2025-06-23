@@ -13,12 +13,103 @@
 
   "EXPERIENCE": "Experiência",
   "PROFESSIONALEXPERIENCE": "Experiência Profissional",
+  "HVBTN": "Mudar para",
+  "EXP_1_ROLE": "Instrutor de Informática e Programação",
+  "EXP_1_COMPANY": "Evolutime – Santos | Set 2021 – Jun 2022",
+  "EXP_1_SUMMARY": "Ministrei cursos de Web, Games e Informática Empresarial, e gerenciei a infraestrutura de TI da escola.",
+  "EXP_1_ACHIEVEMENTS": [
+    "Planejamento e execução de aulas práticas e teóricas voltadas ao mercado de trabalho.",
+    "Manutenção de redes, computadores e ambientes de desenvolvimento.",
+    "Participação em eventos educacionais e feiras de tecnologia."
+  ],
+
+  "EXP_2_ROLE": "Suporte Técnico",
+  "EXP_2_COMPANY": "JOTA5 – Santos | Ago 2022 – Jun 2023",
+  "EXP_2_SUMMARY": "Atuei no suporte de 1º nível, manutenção de redes e atendimento multicanal a clientes residenciais e corporativos.",
+  "EXP_2_ACHIEVEMENTS": [
+    "Instalação e configuração de ramais, roteadores e sistemas operacionais.",
+    "Abertura e gestão de chamados com registro detalhado.",
+    "Diagnóstico e solução de problemas em hardware e software."
+  ],
+
+  "EXP_3_ROLE": "Estagiário em Desenvolvimento",
+  "EXP_3_COMPANY": "7COMm – São Paulo | Jun 2023 – Jun 2024",
+  "EXP_3_SUMMARY": "Desenvolvi um sistema de questionários com envio automatizado de e-mails, utilizando Angular, Spring Boot e MySQL.",
+  "EXP_3_ACHIEVEMENTS": [
+    "Criação de plataforma interna para criação e gerenciamento de questionários.",
+    "Processamento e análise de dados extraídos de PDFs.",
+    "Atuação no ciclo completo de desenvolvimento ágil: modelagem, testes e entrega."
+  ],
+
+  "EXP_4_ROLE": "Desenvolvedor Full Stack Júnior",
+  "EXP_4_COMPANY": "7COMm – São Paulo | Jun 2024 – Presente",
+  "EXP_4_SUMMARY": "Atuo na modernização de sistemas legados do Bradesco e no desenvolvimento de soluções com IA para produtividade e acessibilidade.",
+  "EXP_4_ACHIEVEMENTS": [
+    "Criação do ChatDev e ChatÁgil: chats com IA para suporte técnico e metodologias ágeis.",
+    "Integração com Redis para caching e persistência de histórico de conversas.",
+    "Desenvolvimento do CNPJTNextGen, analisando repositórios Git e sugerindo adaptações ao novo CNPJ com IA.",
+    "Geração automatizada de testes unitários com IA a partir da análise de código-fonte.",
+    "Integração de bibliotecas como PDF.js e VLibras para leitura e acessibilidade."
+  ],
 
 
   "EDUCATION": "Formação",
+  "EDU_COURSE_FATEC": "Tecnólogo em Análise e Desenvolvimento de Sistemas",
+  "EDU_DATE_FATEC": "Agosto 2024",
+  "EDU_DESC_FATEC": "Formação superior focada em desenvolvimento de sistemas, backend, frontend e arquitetura de software.",
 
+  "EDU_COURSE_EVOLUTIME": "Técnico em Design e Desenvolvimento de Jogos",
+  "EDU_DATE_EVOLUTIME": "Agosto 2020",
+  "EDU_DESC_EVOLUTIME": "Curso técnico com foco em desenvolvimento de jogos digitais, design, arte e programação.",
+
+  "EDU_COURSE_ONLINE": "Certificações Online",
+  "EDU_DATE_ONLINE": "Atualmente",
+  "EDU_DESC_ONLINE": "Bradesco, USP, São Judas, DIO, Udemy e outros.",
 
   "PROJECTS": "Projetos",
+  "CODEBTN": "Ver Código",
+  "ACESSBTN": "Acessar Site",
+  "PROJECT_1_TITLE": ".NET MVC com SQL Server",
+  "PROJECT_1_DESC": "Primeiro contato com MVC utilizando .NET C# em conjunto com Entity Framework.",
+
+  "PROJECT_2_TITLE": "Looking for Sounds",
+  "PROJECT_2_DESC": "Projeto de conclusão do Curso Técnico em Design de Games.",
+
+  "PROJECT_3_TITLE": "Clone do Steam Unlocked",
+  "PROJECT_3_DESC": "Projeto tentando recriar um website que consiste em um fórum de jogos.",
+
+  "PROJECT_4_TITLE": "MandarinBr Projeto",
+  "PROJECT_4_DESC": "Website responsivo criado durante o processo seletivo.",
+
+  "PROJECT_5_TITLE": "Quiz Grupo 2",
+  "PROJECT_5_DESC": "Projeto desenvolvido com finalidade de fechar a apresentação de Arquitetura.",
+
+  "PROJECT_6_TITLE": ".NET Web API com SQL Server",
+  "PROJECT_6_DESC": "Primeiro contato com APIs utilizando .NET C#.",
+
+  "PROJECT_7_TITLE": "Primeiro contato com desenvolvimento Web - Nlw3",
+  "PROJECT_7_DESC": "Meu primeiro contato fazendo um projeto chamado Happy.",
+
+  "PROJECT_8_TITLE": "Rum'n Boom",
+  "PROJECT_8_DESC": "Jogo Top-Down desenvolvido em grupo com o motor gráfico Unity.",
+
+  "PROJECT_9_TITLE": "TaskManager",
+  "PROJECT_9_DESC": "Sistema em .NET e Angular para criação e gerenciamento de tarefas com autenticação.",
+
+  "PROJECT_10_TITLE": "Flappy Bird: Shrek",
+  "PROJECT_10_DESC": "Versão humorística do Flappy Bird com Unity 2D. Controle o Shrek e desvie dos obstáculos.",
+
+  "PROJECT_11_TITLE": "Gestor de Ingredientes",
+  "PROJECT_11_DESC": "Sistema completo de gestão para pizzaria com frontend em Flask e backend em Spring Boot.",
+
+  "PROJECT_12_TITLE": "Pet All Friendly",
+  "PROJECT_12_DESC": "Sistema para cuidados de pets silvestres e domésticos com APIs externas, foco em acessibilidade e design responsivo.",
+
+  "PROJECT_13_TITLE": "Rhayadh & Vitor: Saving the Forest",
+  "PROJECT_13_DESC": "Jogo cooperativo com temática ambiental, onde dois heróis salvam animais em extinção no Brasil.",
+
+  "PROJECT_14_TITLE": "Xingu",
+  "PROJECT_14_DESC": "Jogo mundo aberto baseado na cultura indígena brasileira e mitologias do folclore nacional.",
 
 
   "CONTACT": "Contato",
