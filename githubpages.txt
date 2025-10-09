@@ -1,0 +1,3 @@
+ng build --base-href "https://Gabiru-cpu.github.io/portifolio-angular/"
+
+npx angular-cli-ghpages --dir=dist/portifolio/browser
