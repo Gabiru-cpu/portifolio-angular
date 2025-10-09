@@ -205,7 +205,7 @@
   }
 }
 
-.arrow-page{ z-index: 500; }
+.arrow-page{ z-index: 500; background-color: var(--text-card-h3) !important;}
 
 @media (max-width: 767px) {  
   .carousel-container{height: auto !important;}
