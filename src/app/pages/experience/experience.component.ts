@@ -56,6 +56,18 @@ export class ExperienceComponent implements OnInit {
         'EXP_4_ACHIEVEMENTS.3',
         'EXP_4_ACHIEVEMENTS.4'
       ]
+    },
+    {
+      role: 'EXP_5_ROLE',
+      company: 'EXP_5_COMPANY',
+      summary: 'EXP_5_SUMMARY',
+      achievements: [
+        'EXP_5_ACHIEVEMENTS.0',
+        'EXP_5_ACHIEVEMENTS.1',
+        'EXP_5_ACHIEVEMENTS.2',
+        'EXP_5_ACHIEVEMENTS.3',
+        'EXP_5_ACHIEVEMENTS.4'
+      ]
     }
   ];
 
