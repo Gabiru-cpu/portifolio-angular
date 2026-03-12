@@ -42,7 +42,7 @@
   ],
 
   "EXP_4_ROLE": "Desenvolvedor Full Stack Júnior",
-  "EXP_4_COMPANY": "7COMm – São Paulo | Jun 2024 – Presente",
+  "EXP_4_COMPANY": "7COMm – São Paulo | Jun 2024 – Jan 2026",
   "EXP_4_SUMMARY": "Atuo na modernização de sistemas legados do Bradesco e no desenvolvimento de soluções com IA para produtividade e acessibilidade.",
   "EXP_4_ACHIEVEMENTS": [
     "Criação do ChatDev e ChatÁgil: chats com IA para suporte técnico e metodologias ágeis.",
@@ -50,6 +50,17 @@
     "Desenvolvimento do CNPJTNextGen, analisando repositórios Git e sugerindo adaptações ao novo CNPJ com IA.",
     "Geração automatizada de testes unitários com IA a partir da análise de código-fonte.",
     "Integração de bibliotecas como PDF.js e VLibras para leitura e acessibilidade."
+  ],
+
+  "EXP_5_ROLE": "Desenvolvedor Full Stack Pleno",
+  "EXP_5_COMPANY": "Mosten – Santos | Dez 2025 – Atualmente",
+  "EXP_5_SUMMARY": "Atuação no desenvolvimento e manutenção de aplicações full stack para sistemas corporativos e operações portuárias, contribuindo para arquitetura frontend, integrações e soluções logísticas com uso de IA.",
+  "EXP_5_ACHIEVEMENTS": [
+    "Responsável pela documentação da Calculadora de Pickup, sistema que utiliza IA para geolocalização e cálculo de taxas portuárias de acordo com os portos requisitados.",
+    "Suporte contínuo na manutenção, evolução e criação de aplicações para o grupo ABA (Concais, Adonai, FCA, Termap, Contermas, Pier Mauá e Eudmarco) que atua no Porto de Santos.",
+    "Desenvolvimento completo da base do frontend do sistema 'Pague Bem' utilizando React com Vite, estruturando componentes reutilizáveis, gerenciamento de estado global, testes unitários e boas práticas de arquitetura.",
+    "Integração de aplicações com APIs e serviços de terceiros.",
+    "Melhorias na estabilidade do sistema através da correção de bugs e implementação de novas funcionalidades no sistema de gerenciamento de bagageiros para tripulantes e viajantes."
   ],
 
 
