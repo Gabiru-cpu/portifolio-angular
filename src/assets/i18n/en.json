@@ -54,13 +54,13 @@
 
   "EXP_5_ROLE": "Full Stack Developer (Mid-Level)",
   "EXP_5_COMPANY": "Mosten – Santos | Dec 2025 – Present",
-  "EXP_5_SUMMARY": "Develop and maintain full stack applications for port operations and corporate systems, contributing to frontend architecture, integrations, and AI-powered logistics solutions.",
+  "EXP_5_SUMMARY": "Develop and maintain applications for port operations and corporate systems, integrations, and AI-powered logistics solutions.",
   "EXP_5_ACHIEVEMENTS": [
-    "Documented the Pickup Calculator system, an AI-based solution that uses geolocation and port fee formulas according to the requested ports.",
-    "Provided continuous maintenance, evolution, and development of applications for the ABA Group (Concais, Adonai, FCA, Termap, Contermas, Pier Mauá, and Eudmarco) operating in the Port of Santos.",
-    "Developed the entire frontend foundation of the 'Pague Bem' system using React and Vite, implementing reusable components, global state management, unit tests, and scalable architecture.",
+    "Documented the Pickup Calculator, an AI-based system that calculates port fees using geolocation.",
+    "Maintained and evolved systems for the ABA Group operating in the Port of Santos.",
+    "Built the frontend foundation of the 'Pague Bem' system using React and Vite.",
     "Integrated applications with third-party APIs and external services.",
-    "Improved system stability by fixing bugs and implementing new features in the baggage management system for crew members and travelers."
+    "Improved stability and implemented new features in the baggage management system."
   ],
 
 
