@@ -42,7 +42,7 @@
   ],
 
   "EXP_4_ROLE": "Junior Full Stack Developer",
-  "EXP_4_COMPANY": "7COMm – São Paulo | Jun 2024 – Present",
+  "EXP_4_COMPANY": "7COMm – São Paulo | Jun 2024 – Jan 2026",
   "EXP_4_SUMMARY": "Work on modernizing Bradesco’s legacy systems and developing AI-based solutions for productivity and accessibility.",
   "EXP_4_ACHIEVEMENTS": [
     "Created ChatDev and ChatÁgil: AI-powered chats for tech support and agile methodologies.",
@@ -50,6 +50,17 @@
     "Developed CNPJTNextGen, analyzing Git repos and suggesting adaptations for the new CNPJ with AI.",
     "Automatically generated unit tests with AI from source code analysis.",
     "Integrated libraries like PDF.js and VLibras for reading and accessibility."
+  ],
+
+  "EXP_5_ROLE": "Full Stack Developer (Mid-Level)",
+  "EXP_5_COMPANY": "Mosten – Santos | Dec 2025 – Present",
+  "EXP_5_SUMMARY": "Develop and maintain full stack applications for port operations and corporate systems, contributing to frontend architecture, integrations, and AI-powered logistics solutions.",
+  "EXP_5_ACHIEVEMENTS": [
+    "Documented the Pickup Calculator system, an AI-based solution that uses geolocation and port fee formulas according to the requested ports.",
+    "Provided continuous maintenance, evolution, and development of applications for the ABA Group (Concais, Adonai, FCA, Termap, Contermas, Pier Mauá, and Eudmarco) operating in the Port of Santos.",
+    "Developed the entire frontend foundation of the 'Pague Bem' system using React and Vite, implementing reusable components, global state management, unit tests, and scalable architecture.",
+    "Integrated applications with third-party APIs and external services.",
+    "Improved system stability by fixing bugs and implementing new features in the baggage management system for crew members and travelers."
   ],
 
 
